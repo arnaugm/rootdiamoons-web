@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('league-gothic-webfont.eot');
+    src: url('league-gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('league-gothic-webfont.woff') format('woff'),
+         url('league-gothic-webfont.ttf') format('truetype'),
+         url('league-gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#idiomes, #menu, h2, h3, #noticia, td.data_concert_home, td.lloc_concert_home, .titol_album, .titol_disc, .recop_titol, .titol_video, #canal_youtube_text_1, #canal_youtube_text_2, .data_concert, .nom_concert, .any_concert, .data_concert_anterior, #albums a, .nom_component, .nom_document, #newsletter a, td.llista_accio {
+	font-family: LeagueGothicRegular, Impact;
+	text-transform: uppercase;
+}

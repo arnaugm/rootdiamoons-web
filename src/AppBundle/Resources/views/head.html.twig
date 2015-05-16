@@ -1,0 +1,40 @@
+			<div id="cap">
+				<a id="zona_logo" href="{{ path('homepage') }}"><span>Root Diamoons</span></a>
+				<div id="idiomes">
+					{#<?php if($lang == "cat") { ?>#}
+					<span class="sel">Català</span><br />
+					{#<?php } else { ?>#}
+					{#<a href="?l=cat">Català</a><br />#}
+					{#<?php } ?>#}
+					{#<?php if($lang == "cas") { ?>#}
+					<span class="sel">Castellano</span><br />
+					{#<?php } else { ?>#}
+					{#<a href="?l=cas">Castellano</a><br />#}
+					{#<?php } ?>#}
+					{#<?php if($lang == "eng") { ?>#}
+					<span class="sel">English</span>
+					{#<?php } else { ?>#}
+					{#<a href="?l=eng">English</a>#}
+					{#<?php } ?>#}
+				</div>
+				<br class="clearboth" />
+				{#<?php $pag_actual = basename($_SERVER['PHP_SELF']); ?>#}
+				<div id="menu">
+					<ul>
+                        <li class="inici"><a href="{{ path('homepage') }}">{{ 'inici' | trans }}</a></li>
+                        <li class="musica"><a href="musica.php">{{ 'musica' | trans }}</a></li>
+                        <li class="videos"><a href="videos.php">{{ 'videos' | trans }}</a></li>
+                        <li class="concerts"><a href="concerts.php">{{ 'concerts' | trans }}</a></li>
+                        <li class="fotos"><a href="fotos.php">{{ 'fotos' | trans }}</a></li>
+                        <li class="grup"><a href="grup.php">{{ 'grup' | trans }}</a></li>
+                        <li class="contacte"><a href="contacte.php">{{ 'contacte' | trans }}</a></li>
+						{#<li class="inici"><a href="index.php"<?php if($pag_actual == "index.php") echo ' class="sel"'?>><?php __('inici'); ?></a></li>#}
+						{#<li class="musica"><a href="musica.php"<?php if($pag_actual == "musica.php") echo ' class="sel"'?>><?php __('musica'); ?></a></li>#}
+						{#<li class="videos"><a href="videos.php"<?php if($pag_actual == "videos.php") echo ' class="sel"'?>><?php __('videos'); ?></a></li>#}
+						{#<li class="concerts"><a href="concerts.php"<?php if($pag_actual == "concerts.php") echo ' class="sel"'?>><?php __('concerts'); ?></a></li>#}
+						{#<li class="fotos"><a href="fotos.php"<?php if($pag_actual == "fotos.php") echo ' class="sel"'?>><?php __('fotos'); ?></a></li>#}
+						{#<li class="grup"><a href="grup.php"<?php if($pag_actual == "grup.php") echo ' class="sel"'?>><?php __('grup'); ?></a></li>#}
+						{#<li class="contacte"><a href="contacte.php"<?php if($pag_actual == "contacte.php") echo ' class="sel"'?>><?php __('contacte'); ?></a></li>#}
+					</ul>
+				</div>
+			</div>

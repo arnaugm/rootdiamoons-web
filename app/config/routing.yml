@@ -1,0 +1,12 @@
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+homepage:
+    path:      /
+    defaults:  { _controller: AppBundle:Main:homepage }
+
+concerts:
+    path:      /concerts
+    defaults:  { _controller: AppBundle:Main:concerts }

@@ -1,0 +1,20 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div id="contenidor">
+        <div id="cos">
+            {% include 'AppBundle::head.html.twig' %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <div id="contenidor_peu">
+        {% include 'AppBundle::foot.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.swfobject.1-1-1.min.js') }}"></script>
+    <script src="{{ asset('lib/youTubeEmbed/youTubeEmbed-jquery-1.0-custom.js') }}"></script>
+    <script src="{{ asset('js/video_home.js') }}"></script>
+{% endblock %}
