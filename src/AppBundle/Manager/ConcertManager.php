@@ -2,8 +2,8 @@
 
 namespace AppBundle\Manager;
 
+use AppBundle\Repository\ConcertRepository;
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\ORM\EntityRepository;
 
 class ConcertManager
 {
@@ -13,7 +13,7 @@ class ConcertManager
     protected $om;
 
     /**
-     * @var EntityRepository
+     * @var ConcertRepository
      */
     protected $concertRepository;
 

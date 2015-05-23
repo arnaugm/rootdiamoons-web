@@ -7,6 +7,14 @@ homepage:
     path:      /
     defaults:  { _controller: AppBundle:Main:homepage }
 
+music:
+    path:      /music
+    defaults:  { _controller: AppBundle:Main:music }
+
+videos:
+    path:      /videos
+    defaults:  { _controller: AppBundle:Main:videos }
+
 concerts:
     path:      /concerts
     defaults:  { _controller: AppBundle:Main:concerts }

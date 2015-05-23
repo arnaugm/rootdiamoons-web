@@ -9,3 +9,6 @@ services:
         arguments:
             - @doctrine.orm.entity_manager
             - AppBundle\Entity\Concert
+
+    rootdiamoons_web.manager.recop:
+        class: AppBundle\Manager\RecopManager
