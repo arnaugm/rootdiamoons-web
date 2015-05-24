@@ -18,3 +18,7 @@ videos:
 concerts:
     path:      /concerts
     defaults:  { _controller: AppBundle:Main:concerts }
+
+photos:
+    path:      /photos
+    defaults:  { _controller: AppBundle:Main:photos }
