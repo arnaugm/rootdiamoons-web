@@ -22,3 +22,7 @@ concerts:
 photos:
     path:      /photos
     defaults:  { _controller: AppBundle:Main:photos }
+
+band:
+    path:      /band
+    defaults:  { _controller: AppBundle:Main:band }

@@ -61,8 +61,9 @@ class MainController extends Controller
         return $this->render('AppBundle::photos.html.twig');
     }
 
-    public function groupAction()
+    public function bandAction()
     {
+        return $this->render('AppBundle::band.html.twig');
     }
 
     public function contactAction()
