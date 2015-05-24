@@ -746,7 +746,7 @@ a.nom_component {
 }
 
 #newsletter {
-	background-image: url(../imatges/newsletter.png);
+	background-image: url(../images/newsletter.png);
 	width: 259px;
 	height: 95px;
 	margin: auto;
@@ -800,7 +800,7 @@ td.llista_input input {
 	height: 20px;
 	background: rgb(5, 7, 1);
 	background: rgba(5, 7, 1, 0.3);
-	border: 0px;
+	border: 0;
     color: #e4e2a2;
 	font-family: "Georgia";
 	font-size: 13px;
@@ -809,7 +809,7 @@ td.llista_input input {
 }
 
 td.llista_submit input {
-	border: 0px;
+	border: 0;
     background-color: transparent;
     color: #e4e2a2;
     cursor: pointer;

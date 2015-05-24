@@ -68,5 +68,6 @@ class MainController extends Controller
 
     public function contactAction()
     {
+        return $this->render('AppBundle::contact.html.twig');
     }
 }

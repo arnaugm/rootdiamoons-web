@@ -26,3 +26,7 @@ photos:
 band:
     path:      /band
     defaults:  { _controller: AppBundle:Main:band }
+
+contact:
+    path:      /contact
+    defaults:  { _controller: AppBundle:Main:contact }
