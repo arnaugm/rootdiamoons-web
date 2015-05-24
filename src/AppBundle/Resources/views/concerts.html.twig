@@ -1,0 +1,142 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}Root Diamoons - Concerts{% endblock %}
+
+{% block content %}
+
+    {% if nextConcerts | length > 0 %}
+
+    <div id="proxims_concerts" class="primer_bloc">
+
+        <h2>{{ 'proxims_concerts' | trans }}</h2>
+
+        {% for nextConcert in nextConcerts %}
+
+            <div class="proxim">
+                <table>
+                    <tr>
+                        <td class="destacat data_concert">{{ nextConcert.data | date('d/m/y') }}</td>
+                        <td class="destacat nom_concert">{{ nextConcert.concertCat }}</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="detalls_concert">
+                            <span class="lloc_concert">{{ nextConcert.lloc }}</span>, {{ nextConcert.ciutat }}<br/>
+                            {% if nextConcert.adreca is not null %}
+                                {{ nextConcert.adreca }}<br/>
+                            {% endif %}
+                            {{ nextConcert.data | date('H:i') }}h<br/>
+                            <span class="text_concert">{{ nextConcert.textCat }}</span><br/>
+
+                            {% if nextConcert.preu > 0 %}
+                                {% if nextConcert.preuAnticipada is not null %}
+                                    {{ 'anticipada' | trans }}  {{ nextConcert.preuAnticipada | trans }}€ / {{ 'taquilla' | trans }} {{ nextConcert.preu | trans }}€
+                                {% else %}
+                                    {{ nextConcert.preu | trans }}
+                                {% endif %}
+
+                                {#{% if nextConcert.comprar is not null and nextConcert.comprar != '' %}#}
+
+                                    {#{% set llocsComprar = nextConcert.comprar | split(',') %}#}
+                                    {#{% set primer = true %}#}
+                                    {#{% for lloc in llocsComprar %}#}
+                                        {#{% set partsLloc = lloc | split('=>') %}#}
+                                        {#{% if primer %}#}
+                                            {#&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ partsLloc[1] }}" target="_blank" style="font-size: 11px;">{{ 'comprar' | trans }} {{ partsLloc[0] }}</a>#}
+                                        {#{% else %}#}
+                                            {#, <a href="{{ partsLloc[1] }}" target="_blank" style="font-size: 11px;">{{ partsLloc[0] }}</a>#}
+                                        {#{% endif %}#}
+                                        {#{% set primer = false %}#}
+                                    {#{% endfor %}#}
+                                {#{% endif %}#}
+                                <br />
+                            {% endif %}
+
+                            {% if nextConcert.preu == 0 %}
+                                {{ 'gratis' | trans }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                </table>
+
+                {% set facebook = nextConcert.facebook %}
+                {% set mapa = nextConcert.mapa %}
+                {% set cartell = nextConcert.cartellNom %}
+
+                {% set links = [] %}
+                {% if facebook is not empty %}
+                    {% set links = links | merge(['<a href="' ~ facebook ~ '" target="_blank">facebook</a>']) %}
+                {% endif %}
+                {% if mapa is not empty %}
+                    {% set links = links | merge(['<a href="' ~ mapa ~ '" target="_blank">' ~ ('mapa' | trans) ~ '</a>']) %}
+                {% endif %}
+                {% if cartell is not empty %}
+                    {% set links = links | merge(['<a href="imatges/cartells/' ~ cartell ~ ' rel="prettyPhoto[cartells]" title="' ~ nextConcert.data | date('d/m/Y') ~ '">' ~ ('cartell' | trans) ~ '</a>']) %}
+                {% endif %}
+
+                {% if links | length > 0 %}
+                    <div class="links_concert">{{ links | join(' / ') | raw }}</div>
+                {% endif %}
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endif %}
+
+    <div id="concerts_anteriors" class="{% if nextConcerts | length == 0 %}primer_bloc {% endif %}ultim_bloc">
+
+        <h2>{{ 'concerts_anteriors' | trans }}</h2>
+
+        <div id="llista_anys">
+
+            {% set titols_anys = [] %}
+            {% set primer_tots = true %}
+            {% set primer_concert_any = true %}
+
+            {% for pastConcert in pastConcerts %}
+                {% set any = pastConcert.data | date('Y') %}
+                {% if any not in titols_anys %}
+                    {% set titols_anys = titols_anys | merge([any]) %}
+                    {% set primer_concert_any = true %}
+                {% endif %}
+
+                {% if primer_concert_any %}
+                    {% if not primer_tots %}
+                        </div>
+                    {% endif %}
+                    <h3 class="destacat any_concert">{{ any }}</h3>
+                    <div class="llista_concerts_any">
+                {% else %}
+                    <div class="separador_concert_anterior"></div>
+                {% endif %}
+
+                <div class="anterior">
+                    <span class="data_concert_anterior">{{ pastConcert.data | date('d/m/y') }}</span><br/>
+                    <span class="text_concert_anterior">{{ pastConcert.textCat }}</span><br/>
+                    {% set cartell = pastConcert.cartellNom %}
+                    {% if cartell is not empty %}
+                        <div class="links_concert_anterior">
+                            <a href="imatges/cartells/{{ cartell }}" rel="prettyPhoto[cartells]" title="{{ pastConcert.data | date('d/m/Y') }}">{{ 'cartell' | trans }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+                {% set primer_tots = false %}
+                {% set primer_concert_any = false %}
+            {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/prettyPhoto/js/jquery.prettyPhoto.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('js/fotos.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('js/accordion.js') }}"></script>
+{% endblock %}

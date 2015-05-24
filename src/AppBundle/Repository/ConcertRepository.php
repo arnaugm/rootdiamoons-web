@@ -10,10 +10,22 @@ class ConcertRepository extends EntityRepository
     {
         $qb = $this->createQueryBuilder('c');
 
-        $qb = $qb->select('c.data, c.lloc, c.textCat')
+        $qb = $qb->select()
             ->where('c.data > CURRENT_DATE()')
             ->andWhere('c.cancelat = 0')
             ->orderBy('c.data', 'ASC');
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function findPastConcerts()
+    {
+        $qb = $this->createQueryBuilder('c');
+
+        $qb = $qb->select()
+            ->where('c.data <= CURRENT_DATE()')
+            ->andWhere('c.cancelat = 0')
+            ->orderBy('c.data', 'DESC');
 
         return $qb->getQuery()->getResult();
     }

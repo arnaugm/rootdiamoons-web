@@ -48,8 +48,12 @@ class MainController extends Controller
     public function concertsAction()
     {
         $nextConcerts = $this->concertManager->getNextConcerts();
+        $pastConcerts = $this->concertManager->getPastConcerts();
 
-        return $this->render('AppBundle::home.html.twig', array('nextConcerts' => $nextConcerts));
+        return $this->render('AppBundle::concerts.html.twig', array(
+            'nextConcerts' => $nextConcerts,
+            'pastConcerts' => $pastConcerts,
+        ));
     }
 
     public function photosAction()

@@ -34,4 +34,10 @@ class ConcertManager
         return $this->concertRepository
             ->findNextConcerts();
     }
+
+    public function getPastConcerts()
+    {
+        return $this->concertRepository
+            ->findPastConcerts();
+    }
 } 
