@@ -12,3 +12,10 @@ services:
 
     rootdiamoons_web.manager.recop:
         class: AppBundle\Manager\RecopManager
+
+    rootdiamoons_web.manager.subscribe:
+        class: AppBundle\Manager\SubscribeManager
+        arguments:
+            - @mailer
+            - %subscribe_addresses%
+            - %unsubscribe_addresses%

@@ -808,7 +808,7 @@ td.llista_input input {
 	padding-left: 8px;
 }
 
-td.llista_submit input {
+td.llista_submit button {
 	border: 0;
     background-color: transparent;
     color: #e4e2a2;
@@ -818,7 +818,7 @@ td.llista_submit input {
 	font-style: italic;
 }
 
-td.llista_submit input:hover{
+td.llista_submit button:hover{
     text-decoration: underline;
 }
 

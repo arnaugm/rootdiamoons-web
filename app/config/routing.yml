@@ -30,3 +30,11 @@ band:
 contact:
     path:      /contact
     defaults:  { _controller: AppBundle:Main:contact }
+
+issuu:
+    path:      /issuu
+    defaults:  { _controller: AppBundle:Main:issuu }
+
+mailing_list:
+    path:      /mailing-list
+    defaults:  { _controller: AppBundle:Main:mailingList }

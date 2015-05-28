@@ -25,9 +25,10 @@
         </div>
         <div id="issuu_embed">
             {#<iframe src="issuu.php?l={{ lang }}"></iframe>#}
+            <iframe src="{{ path('issuu') }}"></iframe>
         </div>
         <div id="newsletter">
-            <a href="llista-correu.php">
+            <a href="{{ path('mailing_list') }}">
                 <div>
                     {{ 'subscriute' | trans }}<br />
                     <span>{{ 'llista_correu' | trans }}</span>
