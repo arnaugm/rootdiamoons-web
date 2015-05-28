@@ -9,9 +9,9 @@
             <link rel="stylesheet" type="text/css" href="{{ asset('lib/youTubeEmbed/youTubeEmbed-jquery-1.0.css') }}" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        {% include 'AppBundle::google_analytics.html.twig' %}
     </head>
     <body>
+        {% include 'AppBundle::google_analytics.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
