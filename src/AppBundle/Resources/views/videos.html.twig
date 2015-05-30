@@ -9,27 +9,24 @@
             <div class="text_video">
                 <span class="titol_video">Rototom Sunsplash 2011</span> <span class="detall_video">- {{ 'amb_rico' | trans }}</span>
             </div>
-            <div id="video_rototom"></div>
-            <div style="text-align: right;">
-                <a href="http://www.youtube.com/watch?v=1fdw7HXz80Y">{{ 'veure_youtube' | trans }}</a>
+            <div id="video_rototom">
+                <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/1fdw7HXz80Y?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <div class="bloc_video">
             <div class="text_video">
                 <span class="titol_video">Tot al seu temps</span> <span class="detall_video">- {{ 'making_of' | trans }}</span>
             </div>
-            <div id="video_tast"></div>
-            <div style="text-align: right;">
-                <a href="http://www.youtube.com/watch?v=r0bWxYSfT2M">{{ 'veure_youtube' | trans }}</a>
+            <div id="video_tast">
+                <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/r0bWxYSfT2M?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <div class="bloc_video">
             <div class="text_video">
                 <span class="titol_video">Other eyes</span> <span class="detall_video">- {{ 'presentacio_other_eyes' | trans }}</span>
             </div>
-            <div id="video_othereyes"></div>
-            <div style="text-align: right;">
-                <a href="http://www.youtube.com/watch?v=L8uD1qRGspE">{{ 'veure_youtube' | trans }}</a>
+            <div id="video_othereyes">
+                <iframe width="758" height="569" src="https://www.youtube-nocookie.com/embed/L8uD1qRGspE?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <div id="canal_youtube">
@@ -41,11 +38,4 @@
             </a>
         </div>
     </div>
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script src="{{ asset('js/jquery.swfobject.1-1-1.min.js') }}"></script>
-    <script src="{{ asset('lib/youTubeEmbed/youTubeEmbed-jquery-1.0-custom.js') }}"></script>
-    <script src="{{ asset('js/videos.js') }}"></script>
 {% endblock %}

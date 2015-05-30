@@ -1,8 +1,9 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
 {% block content %}
-    <div id="video_home"></div>
-    <div style="text-align: right;"><a href="http://www.youtube.com/watch?v=r0bWxYSfT2M">{{ 'veure_youtube' | trans }}</a></div>
+    <div id="video_home">
+        <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/r0bWxYSfT2M?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
     <div id="separador_video">&nbsp;</div>
     <div id="noticia">
         {{ 'destacat_1' | trans }}<br/>
@@ -28,11 +29,4 @@
         </table>
     </div>
     {% endif %}
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script src="{{ asset('js/jquery.swfobject.1-1-1.min.js') }}"></script>
-    <script src="{{ asset('lib/youTubeEmbed/youTubeEmbed-jquery-1.0-custom.js') }}"></script>
-    <script src="{{ asset('js/video_home.js') }}"></script>
 {% endblock %}

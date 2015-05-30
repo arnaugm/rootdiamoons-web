@@ -283,7 +283,6 @@ div.pp_default .pp_description {
 	width: 758px;
 	height: 427px;
 	margin-top: -54px;
-	background-color: #000;
 }
 
 #separador_video {
@@ -492,10 +491,6 @@ td.text_concert_home {
 #canal_youtube_text_2 {
 	color: #22240b;
 	font-size: 37px;
-}
-
-#video_rototom, #video_tast, #video_othereyes {
-	background-color: #000;
 }
 
 
