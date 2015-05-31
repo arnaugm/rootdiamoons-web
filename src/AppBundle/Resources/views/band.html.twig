@@ -2,6 +2,11 @@
 
 {% block title %}Root Diamoons - Grup{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+{% endblock %}
+
 {% block content %}
     <div id="grup" class="primer_bloc ultim_bloc">
 
@@ -60,5 +65,6 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('js/fotos_grup.js') }}"></script>
+    <script src="{{ asset('vendor/prettyphoto/js/jquery.prettyPhoto.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('js/photos.js') }}"></script>
 {% endblock %}

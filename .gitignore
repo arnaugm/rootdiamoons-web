@@ -9,5 +9,6 @@
 /bin/
 /composer.phar
 /vendor/
+/bower_components/
 /web/bundles/
 /web/documents/

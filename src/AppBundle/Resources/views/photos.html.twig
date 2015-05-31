@@ -2,6 +2,11 @@
 
 {% block title %}Root Diamoons - Fotos{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+{% endblock %}
+
 {% block content %}
     <div id="fotos" class="primer_bloc ultim_bloc">
 
@@ -26,7 +31,7 @@
                 <a href="{{ asset('images/albums/boca_nord/boca_nord_10.jpg') }}" rel="prettyPhoto[boca_nord]" title="Boca Nord - Presentació RD2014">boca_nord_10</a>
             </div>
             <div class="fotograf">{{ 'fotos_autor' | trans }} Maria Olivella</div>
-            <div class="veure_album"><a href="javascript:obreAlbum('boca_nord')">{{ 'veure_album' | trans }}</a></div>
+            <div class="veure_album"><a href="#" data-album="boca_nord">{{ 'veure_album' | trans }}</a></div>
         </div>
 
         <div class="bloc_album">
@@ -45,7 +50,7 @@
                 <a href="{{ asset('images/albums/tast/tast_07.jpg') }}" rel="prettyPhoto[tast]" title="Tot al seu temps - Cafè del Centre">tast_07</a>
             </div>
             <div class="fotograf">{{ 'fotos_autor' | trans }} Enya Rodríguez {{ 'i' | trans }} Marina Méndez</div>
-            <div class="veure_album"><a href="javascript:obreAlbum('tast')">{{ 'veure_album' | trans }}</a></div>
+            <div class="veure_album"><a href="#" data-album="tast">{{ 'veure_album' | trans }}</a></div>
         </div>
 
         <div class="bloc_album">
@@ -70,7 +75,7 @@
                 <a href="{{ asset('images/albums/rototom/rototom_13.jpg') }}" rel="prettyPhoto[rototom]" title="Rototom Sunsplash 2011">rototom_13</a>
             </div>
             <div class="fotograf">{{ 'fotos_autor' | trans }} Maria Coll, Maria Vergé {{ 'i' | trans }} Jep Jorba</div>
-            <div class="veure_album"><a href="javascript:obreAlbum('rototom')">{{ 'veure_album' | trans }}</a></div>
+            <div class="veure_album"><a href="#" data-album="rototom">{{ 'veure_album' | trans }}</a></div>
         </div>
 
         <div id="albums">
@@ -85,5 +90,6 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('js/fotos.js') }}"></script>
+    <script src="{{ asset('vendor/prettyphoto/js/jquery.prettyPhoto.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('js/photos.js') }}"></script>
 {% endblock %}

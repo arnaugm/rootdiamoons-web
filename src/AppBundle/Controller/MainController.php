@@ -9,7 +9,10 @@ use AppBundle\Manager\RecopManager;
 use AppBundle\Manager\SubscribeManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class MainController extends Controller
 {
@@ -69,6 +72,34 @@ class MainController extends Controller
     public function photosAction()
     {
         return $this->render('AppBundle::photos.html.twig');
+    }
+
+    public function downloadImgAction(Request $request)
+    {
+        $img = $request->query->get('img');
+
+        // check the file contains the extension .jpg, .jpeg or .png
+        if ((stripos(strrev($img), strrev('.jpg')) !== 0) &&
+            (stripos(strrev($img), strrev('.jpeg')) !== 0) &&
+            (stripos(strrev($img), strrev('.png')) !== 0)) {
+            throw new NotFoundHttpException();
+        }
+
+        $file = $request->server->get('DOCUMENT_ROOT') . $img;
+
+        // check the file exists
+        if (!is_file($file)) {
+            throw new NotFoundHttpException();
+        }
+
+        $response = new BinaryFileResponse($file);
+        $disposition = $response->headers->makeDisposition(
+            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
+            basename($file)
+        );
+        $response->headers->set('Content-Disposition', $disposition);
+
+        return $response;
     }
 
     public function bandAction()

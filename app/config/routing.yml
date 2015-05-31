@@ -23,6 +23,10 @@ photos:
     path:      /photos
     defaults:  { _controller: AppBundle:Main:photos }
 
+download_img:
+    path:      /download-img
+    defaults:  { _controller: AppBundle:Main:downloadImg }
+
 band:
     path:      /band
     defaults:  { _controller: AppBundle:Main:band }

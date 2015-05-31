@@ -24,8 +24,12 @@ img {
 	border: 0;
 }
 
+.pp_social .save {
+    float: left;
+}
+
 .save-button {
-    background-image: url(../imatges/disk.png);
+    background-image: url(../images/disk.png);
     background-repeat: no-repeat;
     display: block;
     width: 30px;
@@ -35,7 +39,7 @@ img {
 }
 
 .pp_social .facebook {
-    width: 75px;
+    width: 85px !important;
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */

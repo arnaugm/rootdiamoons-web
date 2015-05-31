@@ -2,6 +2,11 @@
 
 {% block title %}Root Diamoons - Concerts{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+{% endblock %}
+
 {% block content %}
 
     {% if nextConcerts | length > 0 %}
@@ -71,7 +76,7 @@
                     {% set links = links | merge(['<a href="' ~ mapa ~ '" target="_blank">' ~ ('mapa' | trans) ~ '</a>']) %}
                 {% endif %}
                 {% if cartell is not empty %}
-                    {% set links = links | merge(['<a href="imatges/cartells/' ~ cartell ~ ' rel="prettyPhoto[cartells]" title="' ~ nextConcert.data | date('d/m/Y') ~ '">' ~ ('cartell' | trans) ~ '</a>']) %}
+                    {% set links = links | merge(['<a href="' ~ asset('images/cartells/' ~ cartell) ~ '" rel="prettyPhoto[cartells]" title="' ~ nextConcert.data | date('d/m/Y') ~ '">' ~ ('cartell' | trans) ~ '</a>']) %}
                 {% endif %}
 
                 {% if links | length > 0 %}
@@ -118,7 +123,7 @@
                     {% set cartell = pastConcert.cartellNom %}
                     {% if cartell is not empty %}
                         <div class="links_concert_anterior">
-                            <a href="imatges/cartells/{{ cartell }}" rel="prettyPhoto[cartells]" title="{{ pastConcert.data | date('d/m/Y') }}">{{ 'cartell' | trans }}</a>
+                            <a href="{{ asset('images/cartells/' ~  cartell) }}" rel="prettyPhoto[cartells]" title="{{ pastConcert.data | date('d/m/Y') }}">{{ 'cartell' | trans }}</a>
                         </div>
                     {% endif %}
                 </div>
@@ -135,8 +140,9 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{ asset('js/prettyPhoto/js/jquery.prettyPhoto.js') }}" type="text/javascript" charset="utf-8"></script>
-    <script src="{{ asset('js/fotos.js') }}"></script>
-    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('js/accordion.js') }}"></script>
+    <script src="{{ asset('vendor/prettyphoto/js/jquery.prettyPhoto.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-ui/accordion.min.js') }}"></script>
+    <script src="{{ asset('js/photos.js') }}"></script>
+    <script src="{{ asset('js/concerts.js') }}"></script>
 {% endblock %}
