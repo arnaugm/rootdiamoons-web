@@ -22,37 +22,30 @@
 
                 </div>
 				<br class="clearboth" />
-				{#<?php $pag_actual = basename($_SERVER['PHP_SELF']); ?>#}
 				<div id="menu">
 					<ul>
                         <li class="inici">
-                            <a href="{{ path('homepage') }}">{{ 'inici' | trans }}</a>
+                            {%  dump app.request %}
+                            <a href="{{ path('homepage') }}"{% if app.request.attributes.get('_route')  == 'homepage' %} class="sel"{% endif %}>{{ 'inici' | trans }}</a>
                         </li>
                         <li class="musica">
-                            <a href="{{ path('music') }}">{{ 'musica' | trans }}</a>
+                            <a href="{{ path('music') }}"{% if app.request.attributes.get('_route')  == 'music' %} class="sel"{% endif %}>{{ 'musica' | trans }}</a>
                         </li>
                         <li class="videos">
-                            <a href="{{ path('videos') }}">{{ 'videos' | trans }}</a>
+                            <a href="{{ path('videos') }}"{% if app.request.attributes.get('_route')  == 'videos' %} class="sel"{% endif %}>{{ 'videos' | trans }}</a>
                         </li>
                         <li class="concerts">
-                            <a href="{{ path('concerts') }}">{{ 'concerts' | trans }}</a>
+                            <a href="{{ path('concerts') }}"{% if app.request.attributes.get('_route')  == 'concerts' %} class="sel"{% endif %}>{{ 'concerts' | trans }}</a>
                         </li>
                         <li class="fotos">
-                            <a href="{{ path('photos') }}">{{ 'fotos' | trans }}</a>
+                            <a href="{{ path('photos') }}"{% if app.request.attributes.get('_route')  == 'photos' %} class="sel"{% endif %}>{{ 'fotos' | trans }}</a>
                         </li>
                         <li class="grup">
-                            <a href="{{ path('band') }}">{{ 'grup' | trans }}</a>
+                            <a href="{{ path('band') }}"{% if app.request.attributes.get('_route')  == 'band' %} class="sel"{% endif %}>{{ 'grup' | trans }}</a>
                         </li>
                         <li class="contacte">
-                            <a href="{{ path('contact') }}">{{ 'contacte' | trans }}</a>
+                            <a href="{{ path('contact') }}"{% if app.request.attributes.get('_route')  == 'contact' %} class="sel"{% endif %}>{{ 'contacte' | trans }}</a>
                         </li>
-						{#<li class="inici"><a href="index.php"<?php if($pag_actual == "index.php") echo ' class="sel"'?>><?php __('inici'); ?></a></li>#}
-						{#<li class="musica"><a href="musica.php"<?php if($pag_actual == "musica.php") echo ' class="sel"'?>><?php __('musica'); ?></a></li>#}
-						{#<li class="videos"><a href="videos.php"<?php if($pag_actual == "videos.php") echo ' class="sel"'?>><?php __('videos'); ?></a></li>#}
-						{#<li class="concerts"><a href="concerts.php"<?php if($pag_actual == "concerts.php") echo ' class="sel"'?>><?php __('concerts'); ?></a></li>#}
-						{#<li class="fotos"><a href="fotos.php"<?php if($pag_actual == "fotos.php") echo ' class="sel"'?>><?php __('fotos'); ?></a></li>#}
-						{#<li class="grup"><a href="grup.php"<?php if($pag_actual == "grup.php") echo ' class="sel"'?>><?php __('grup'); ?></a></li>#}
-						{#<li class="contacte"><a href="contacte.php"<?php if($pag_actual == "contacte.php") echo ' class="sel"'?>><?php __('contacte'); ?></a></li>#}
 					</ul>
 				</div>
 			</div>
