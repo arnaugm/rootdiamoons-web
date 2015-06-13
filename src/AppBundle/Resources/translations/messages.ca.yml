@@ -1,0 +1,92 @@
+# menu
+inici: Inici
+musica: Música
+videos: Videos
+concerts: Concerts
+fotos: Fotos
+grup: Grup
+contacte: Contacte
+
+# inici
+destacat_1: Root Diamoons
+destacat_2: Disc a la venda
+mes_info: més info
+
+# musica
+discografia: Discografia
+amb: amb
+text_tast: "Després de deu anys en escena, el segon àlbum en la trajectòria de Root Diamoons, \"Tot al seu temps\", arriba en un moment àlgid. De plena compenetració entre els músics, tant els propis com els convidats (de la talla de Greg Lee de la banda californiana Hepcat, el novaiorquès David Hillyard o l'italià Mr. T-Bone) i amb una cantant, Berta Gratacòs, que mostra el seu talent aconseguint registres propis de les grans dames del jazz. Un treball propici per a seduir. Subtil. Elegant. Sofisticat. Amb aires romàntics. Explorant racons on la música amb classe (jazz jamaicà, rock steady, jazz americà) suposa un magnífic pretext per fer arribar el missatge a qui sap apreciar-lo. Perdre-se'l seria temptar la sort. Perdre's-hi, val la pena. Molt."
+text_woe: "\"With other eyes\" és una aposta segura de la factoria de Silver Bullets (Brixton Records): catorze temes amb vocació de ball, per encarar la vida amb una filosofia diferent, amb positivisme i afany de rascar, com les urpes d'un gat, en el més profund. Com un rastrejador de les arrels jamaicanes en busca de la seva essència mateixa per atraure-la al terreny del jazz o com un adolescent enamorat que beu els vents per una noieta de l'<i>uptown</i>, que bé es podria anomenar Laila o Mary Ann."
+edicio_japo: "Editat també per \"Ska In The World\" (Japó), 2009"
+recopilatoris: Recopilatoris
+tema: Tema
+recop_daurada: "Recopilatori del segell de Castelló que pretén agrupar a aquelles bandes que interpreten sons jamaicans de les dècades dels 60 i 70. La compilació compta amb formacions com Shanty Town, The Cabrians, Root Diamoons, Supa Bassie & Queen Smiley, Nano Bravo o Hot Drop."
+recop_emergents: "Selecció de temes a càrrec de l'Ajuntament de Barcelona amb la participació de grups joves com LaRumbé, Dismensionel o Root Diamoons comptant amb la participació de iCat FM, mondosonoro.com i scannerfm.com."
+recop_lovesteady: "Recopilatori de grups europeus de música jamaicana. L'edició és del segell de Bulgària \"Alcohooliganska Records\" i compta amb grups com La Familia Torelli, Root Diamoons, The Skarabeez o The Upsessions."
+recop_out_of_many: "Extens recopilatori de 33 temes editat al Japó pel prestigiós segell \"Ska In The World\" amb bandes de reconeixament internacional com The Slackers, The Toasters, Dave Hillyard and The Rocksteady 7, The Aggrolites, Wesbound Train, Go Jimmy Go o Dr. Ring-Ding."
+recop_lovers: "Recopilatori editat pel segell japonès \"Ska In The World\" on Root Diamoons comparteix disc amb bandes com The Pepper Pots, Alton Ellis o New York Ska-Jazz Ensemble."
+recop_embolingats: "Recopilatori editat a Barcelona en tribut a Skatalà, en què diferents bandes de Catalunya versionen els èxits d'aquest mític grup dels 80."
+recop_boss_sounds: "Recopilatori de Ska, Reggae, Dub i Rocksteady de la mà del portal www.boss-sounds.org i editat per Redstar 73 amb temes de bandes catalanes com Flight 404, Mr. Freak Ska, Soweto, Root Diamoons o The Cabrians."
+
+# videos
+amb_rico: amb en Rico Rodriguez
+making_of: darrere les càmeres
+presentacio_other_eyes: "presentació del disc \"With other eyes\""
+entra_al_nostre: Entra al nostre
+canal_de_youtube: canal de Youtube
+
+# concerts
+proxims_concerts: Pròxims concerts
+gratuit: Gratuït
+mapa: mapa
+cartell: cartell
+concerts_anteriors: Concerts anteriors
+anticipada: anticipada
+taquilla: taquilla
+comprar: comprar
+
+# fotos
+fotos_autor: fotos
+veure_album: veure l'àlbum
+mira_albums: Més àlbums a Facebook
+
+# grup
+cantant: Cantant
+trombo: Trombó
+teclats: Teclats
+trompeta: Trompeta
+guitarra: Guitarra
+baix: Baix
+saxo_tenor: Saxo Tenor
+bateria: Bateria
+
+# contacte
+rider_tecnic: Rider tècnic
+dossier_premsa: Dossier premsa
+alta_qualitat: alta qualitat
+baixa_qualitat: baixa qualitat
+descarregar_pdf: descarregar pdf
+disseny: disseny
+programacio: programació
+subscriute: Subscriu-te a la nostra
+
+# llista_correu
+llista_correu: Llista de correu
+correu_info: "Per rebre notícies sobre el grup i avisos sobre propers concerts per correu electrònic facilita'ns la teva adreça.<br />Per borrar-te de la llista introdueix l'adreça i clica el botó \"Borrar\"."
+correu_info2: "Rebràs un correu demanant una confirmació. Respon aquest correu per fer efectiva l'alta o la baixa."
+alta: Alta
+adreca: adreça de correu
+boto_subs: subscriure
+baixa: Baixa
+boto_unsubs: borrar
+correu_nota: "Nota: Sovint els missatges enviats a través de llistes de distribució són classificats pels servidors de correu com a spam. Assegura't que rebs els missatges de <strong>llista@rootdiamoons.com</strong> a la teva bústia d'entrada."
+correu_adreces1: "Per subscriure't també pots enviar un missatge en blanc a<br />llista-subscribe@rootdiamoons.com"
+correu_adreces2: "Per deixar de rebre missatges també pots enviar un missatge en blanc a<br /> llista-unsubscribe@rootdiamoons.com"
+confirm_subs: "<strong>Fantàstic!</strong><br />Un cop hagis respost el mail de confirmació, hauràs quedat <strong>inscrit</strong> a la llista de correu de Root Diamoons amb l'adreça"
+confirm_unsubs: "<strong>Bé</strong><br />Un cop hagis respost el mail de confirmació, hauràs quedat <strong>borrat</strong> de la llista de correu de Root Diamoons amb l'adreça"
+error_subs: "<strong>Ups!</strong><br />Hi ha hagut un problema al realitzar la subscripció. Siusplau, intenta-ho més tard o envia'ns un correu a <strong>rdinfo@rootdiamoons.com</strong>."
+error_unsubs: "<strong>Ups!</strong><br />Hi ha hagut un problema al borrar la subscripció. Siusplau, intenta-ho més tard o envia'ns un correu a <strong>rdinfo@rootdiamoons.com</strong>."
+gracies: "Moltes gràcies!"
+
+#generals
+i: i

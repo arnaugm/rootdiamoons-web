@@ -1,6 +1,6 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
-{% block title %}Root Diamoons - Contacte{% endblock %}
+{% block title %}Root Diamoons - {{ 'contacte' | trans }}{% endblock %}
 
 {% block content %}
     <div id="contacte" class="primer_bloc ultim_bloc">
@@ -24,7 +24,6 @@
             <br class="clearboth">
         </div>
         <div id="issuu_embed">
-            {#<iframe src="issuu.php?l={{ lang }}"></iframe>#}
             <iframe src="{{ path('issuu') }}"></iframe>
         </div>
         <div id="newsletter">

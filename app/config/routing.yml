@@ -14,41 +14,59 @@ easy_admin_bundle:
     prefix:   /admin
 
 homepage:
-    path:      /
-    defaults:  { _controller: AppBundle:Main:homepage }
+    path:      /{_locale}
+    defaults:  { _controller: AppBundle:Main:homepage, _locale: ca }
+    requirements:
+        _locale: "%app.locales%"
 
 music:
-    path:      /music
+    path:      /{_locale}/music
     defaults:  { _controller: AppBundle:Main:music }
+    requirements:
+        _locale: "%app.locales%"
 
 videos:
-    path:      /videos
+    path:      /{_locale}/videos
     defaults:  { _controller: AppBundle:Main:videos }
+    requirements:
+        _locale: "%app.locales%"
 
 concerts:
-    path:      /concerts
+    path:      /{_locale}/concerts
     defaults:  { _controller: AppBundle:Main:concerts }
+    requirements:
+        _locale: "%app.locales%"
 
 photos:
-    path:      /photos
+    path:      /{_locale}/photos
     defaults:  { _controller: AppBundle:Main:photos }
+    requirements:
+        _locale: "%app.locales%"
 
 download_img:
     path:      /download-img
     defaults:  { _controller: AppBundle:Main:downloadImg }
 
 band:
-    path:      /band
+    path:      /{_locale}/band
     defaults:  { _controller: AppBundle:Main:band }
+    requirements:
+        _locale: "%app.locales%"
 
 contact:
-    path:      /contact
+    path:      /{_locale}/contact
     defaults:  { _controller: AppBundle:Main:contact }
+    requirements:
+        _locale: "%app.locales%"
 
 issuu:
-    path:      /issuu
+    path:      /{_locale}/issuu
     defaults:  { _controller: AppBundle:Main:issuu }
+    requirements:
+        _locale: "%app.locales%"
 
 mailing_list:
-    path:      /mailing-list
+    path:      /{_locale}/mailing-list
     defaults:  { _controller: AppBundle:Main:mailingList }
+    requirements:
+        _locale: "%app.locales%"

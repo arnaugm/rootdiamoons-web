@@ -7,11 +7,11 @@
         <h2>{{ 'llista_correu' | trans }}</h2>
         <div id="llista_correu_text">
 
-            {{ 'correu_info' | trans }}
+            {{ 'correu_info' | trans | raw }}
             <br />
             <br />
 
-            {{ 'correu_info2' | trans }}
+            {{ 'correu_info2' | trans | raw }}
             <br />
             <br />
 
@@ -29,7 +29,6 @@
                         </td>
                     </tr>
                 </table>
-            {#{{ form_errors(subscribeForm.email) }}#}
             {{ form_end(subscribeForm) }}
 
             {{ form_start(unsubscribeForm, {'attr': {'novalidate': 'novalidate'}}) }}
@@ -52,9 +51,14 @@
             {{ form_errors(unsubscribeForm.email) }}
 
             <div id="correu_nota">
-                {{ 'correu_nota' | trans }}
+                {{ 'correu_nota' | trans | raw }}
             </div>
-            {{ 'correu_adreces' | trans }}
+            <p>
+                {{ 'correu_adreces1' | trans | raw }}
+            </p>
+            <p>
+                {{ 'correu_adreces2' | trans | raw }}
+            </p>
         </div>
     </div>
 {% endblock %}

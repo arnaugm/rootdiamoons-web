@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td class="text_concert_home" colspan="2">{{ concert.textCat }}</td>
+                <td class="text_concert_home" colspan="2">{{ concert.getText(app.request.locale) }}</td>
             </tr>
         {% endfor %}
         </table>

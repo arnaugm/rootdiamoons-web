@@ -1,6 +1,6 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
-{% block title %}Root Diamoons - Concerts{% endblock %}
+{% block title %}Root Diamoons - {{ 'concerts' | trans }}{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -21,7 +21,7 @@
                 <table>
                     <tr>
                         <td class="destacat data_concert">{{ nextConcert.data | date('d/m/y') }}</td>
-                        <td class="destacat nom_concert">{{ nextConcert.concertCat }}</td>
+                        <td class="destacat nom_concert">{{ nextConcert.getConcert(app.request.locale) }}</td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
@@ -31,7 +31,7 @@
                                 {{ nextConcert.adreca }}<br/>
                             {% endif %}
                             {{ nextConcert.data | date('H:i') }}h<br/>
-                            <span class="text_concert">{{ nextConcert.textCat }}</span><br/>
+                            <span class="text_concert">{{ nextConcert.getText(app.request.locale) }}</span><br/>
 
                             {% if nextConcert.preu > 0 %}
                                 {% if nextConcert.preuAnticipada is not null %}
@@ -58,7 +58,7 @@
                             {% endif %}
 
                             {% if nextConcert.preu == 0 %}
-                                {{ 'gratis' | trans }}
+                                {{ 'gratuit' | trans }}
                             {% endif %}
                         </td>
                     </tr>
@@ -119,7 +119,7 @@
 
                 <div class="anterior">
                     <span class="data_concert_anterior">{{ pastConcert.data | date('d/m/y') }}</span><br/>
-                    <span class="text_concert_anterior">{{ pastConcert.textCat }}</span><br/>
+                    <span class="text_concert_anterior">{{ pastConcert.getText(app.request.locale) }}</span><br/>
                     {% set cartell = pastConcert.cartellNom %}
                     {% if cartell is not empty %}
                         <div class="links_concert_anterior">

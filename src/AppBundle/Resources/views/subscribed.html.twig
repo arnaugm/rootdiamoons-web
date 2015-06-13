@@ -8,16 +8,22 @@
 
         <div id="llista_correu_text">
             {% if not error %}
-                {{ 'confirm_subs' | trans }}
+                {{ 'confirm_subs' | trans | raw }}
                 <em><strong>{{ email }}</strong></em><br />
+                <br />
+                <strong>{{ 'gracies' | trans }}</strong>
             {% else %}
-                {{ 'error_subs' | trans }}<br />
+                {{ 'error_subs' | trans | raw }}<br />
+                <br />
             {% endif %}
-            <br />
-            <strong>{{ 'gracies' | trans }}</strong>
 
-            <div id="correu_nota">{{ 'correu_nota' | trans }}</div>
-            {{ 'correu_adreces' | trans }}
+            <div id="correu_nota">{{ 'correu_nota' | trans | raw }}</div>
+            <p>
+                {{ 'correu_adreces1' | trans | raw }}
+            </p>
+            <p>
+                {{ 'correu_adreces2' | trans | raw }}
+            </p>
         </div>
     </div>
 {% endblock %}

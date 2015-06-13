@@ -1,0 +1,92 @@
+# menu
+inici: Home
+musica: Music
+videos: Videos
+concerts: Concerts
+fotos: Photos
+grup: Band
+contacte: Contact
+
+# inici
+destacat_1: Root Diamoons
+destacat_2: Album on sale
+mes_info: more info
+
+# musica
+discografia: Discography
+amb: with
+text_tast: "After ten years on the stage, \"Tot al seu temps\", Root Diamoons' second album, arrives at a crucial moment. With a close rapport between musicians, both band members and guests (of the stature of Greg Lee from the Californian band Hepcat, the New Yorker David Hillyard and the Italian Mr. T-Bone), and Berta Gratacòs, a singer who shows her talent by achieving registers characteristic of the great ladies of jazz, it is a work able to seduce. Subtle. Elegant. Sophisticated. With romantic airs. Exploring places where music with class (Jamaican jazz, rock steady, American jazz) provides a magnificent pretext to make the message known to the one who is able to appreciate it. To miss it would be to tempt fate. To lose oneself in it, is really worth it."
+text_woe: "\"With other eyes\" is a safe bet from the Silver Bullets (Brixton Records) record label: fourteen tracks with a dance vocation, which make you face life with a different philosophy, with positivity and a desire to scratch deeply beneath the surface, like cat's claws. Like a follower of Jamaican music roots looking for its essence to appeal to the field of jazz or like an adolescent in love who falls head over heels for an uptown girl, who could be called Laila or Mary Ann."
+edicio_japo: "Published also by \"Ska In The World\" (Japan), 2009"
+recopilatoris: Compilation albums
+tema: Song
+recop_daurada: "Compilation album by the label from Castelló which pretends to gather those bands that play jamaican sounds of the 60s and 70s. The compilation has formations like Shanty Town, The Cabrians, Root Diamoons, Supa Bassie & Queen Smiley, Nano Bravo or Hot Drop."
+recop_emergents: "Songs selection by the Ajuntament de Barcelona with the participation of young bands like LaRumbé, Dismensionel or Root Diamoons counting on the participation of iCat FM, mondosonoro.com and scannerfm.com."
+recop_lovesteady: "European jamaican music bands compilation album. Published by the Bulgarian label \"Alcohooliganska Records\" with songs of bands like La Familia Torelli, Root Diamoons, The Skarabeez o The Upsessions."
+recop_out_of_many: "Extensive compilation album with 33 songs published in Japan by the prestigious label \"Ska In The World\" with internationaly recognized bands like The Slackers, The Toasters, Dave Hillyard and The Rocksteady 7, The Aggrolites, Wesbound Train, Go Jimmy Go or Dr. Ring-Ding."
+recop_lovers: "Compilation album published by the japanese label \"Ska In The World\" where Root Diamoons shares record with bands like The Pepper Pots, Alton Ellis or New York Ska-Jazz Ensemble."
+recop_embolingats: "Compilation album published in Barcelona as a tribute to Skatalà, where different bands from Catalonia make covers of this legendary 80s band hits."
+recop_boss_sounds: "Compilation of Ska, Reggae, Dub and Rocksteady by the site www.boss-sounds.org and published by Redstar 73 with songs from catalan bands like Flight 404, Mr. Freak Ska, Soweto, Root Diamoons or The Cabrians."
+
+# videos
+amb_rico: with Rico Rodriguez
+making_of: making of
+presentacio_other_eyes: "presentation of the album \"With other eyes\""
+entra_al_nostre: Enter into our
+canal_de_youtube: Youtube channel
+
+# concerts
+proxims_concerts: Next concerts
+gratuit: Free
+mapa: map
+cartell: poster
+concerts_anteriors: Previous concerts
+anticipada: advance
+taquilla: box office
+comprar: buy
+
+# fotos
+fotos_autor: photos
+veure_album: see the photo album
+mira_albums: More photos in Facebook
+
+# grup
+cantant: Singer
+trombo: Trombone
+teclats: Keyboards
+trompeta: Trumpet
+guitarra: Guitar
+baix: Bass
+saxo_tenor: Tenor Sax
+bateria: Drums
+
+# contacte
+rider_tecnic: Technical rider
+dossier_premsa: Press dossier
+alta_qualitat: high quality
+baixa_qualitat: low quality
+descarregar_pdf: download pdf
+disseny: design
+programacio: programming
+subscriute: Subscribe to our
+
+# llista_correu
+llista_correu: Newsletter
+correu_info: "To receive news about the band and announcements about next concerts give us your address.<br />To be deleted of the list introduce the address and click the button \"Delete\"."
+correu_info2: "You will recive a mail asking for a confirmation. Reply that mail to complete the subscription or unsubscription.<br /><br />By now the messages are <strong>only sent in catalan and spanish</strong>. If you are really interested in receive them in English make us notice it at <strong>rdinfo@rootdiamoons.com</strong>."
+alta: Subscribe
+adreca: mail address
+boto_subs: subscribe
+baixa:  Unsubscribe
+boto_unsubs: delete
+correu_nota: "Note: Often messages sent through mailing list are classified for the mail servers as spam. Be sure that you recive the messages of <strong>llista@rootdiamoons.com</strong> in your mail box."
+correu_adreces1: "To be subscribed you can also send a blank message to<br />llista-subscribe@rootdiamoons.com"
+correu_adreces2: "To be unsubscribed you can also send a blank message to<br />llista-unsubscribe@rootdiamoons.com"
+confirm_subs: "<strong>Great!</strong><br />Once you have replied the confirmation mail, you would have been satisfactorily <strong>subscribed</strong> at the Root Diamoons mailing list with the address"
+confirm_unsubs: "<strong>Ok</strong><br />Once you have replied the confirmation mail, you would have been satisfactorily <strong>deleted</strong> from the Root Diamoons mailing list with the address"
+error_subs: "<strong>Ups!</strong><br />There's been a problem during the subscription process. Please, try again later or send us an e-mail to <strong>rdinfo@rootdiamoons.com</strong>."
+error_unsubs: "<strong>Ups!</strong><br />There's been a problem during the unsubscription process. Please, try again later or send us an e-mail to <strong>rdinfo@rootdiamoons.com</strong>."
+gracies: "Thank you very much!"
+
+#generals
+i: and

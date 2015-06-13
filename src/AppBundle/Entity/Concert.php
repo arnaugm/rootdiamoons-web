@@ -123,7 +123,7 @@ class Concert
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -146,7 +146,7 @@ class Concert
     /**
      * Get data
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getData()
     {
@@ -169,7 +169,7 @@ class Concert
     /**
      * Get concertCat
      *
-     * @return string 
+     * @return string
      */
     public function getConcertCat()
     {
@@ -192,7 +192,7 @@ class Concert
     /**
      * Get concertCas
      *
-     * @return string 
+     * @return string
      */
     public function getConcertCas()
     {
@@ -215,11 +215,28 @@ class Concert
     /**
      * Get concertEng
      *
-     * @return string 
+     * @return string
      */
     public function getConcertEng()
     {
         return $this->concertEng;
+    }
+
+    /**
+     * Gets the corresponding concert name according to the locale
+     *
+     * @param string $locale
+     * @return string
+     */
+    public function getConcert($locale)
+    {
+        if ($locale == 'es') {
+            return $this->getConcertCas();
+        } elseif ($locale == 'en') {
+            return $this->getConcertEng();
+        } else {
+            return $this->getConcertCat();
+        }
     }
 
     /**
@@ -238,7 +255,7 @@ class Concert
     /**
      * Get lloc
      *
-     * @return string 
+     * @return string
      */
     public function getLloc()
     {
@@ -261,7 +278,7 @@ class Concert
     /**
      * Get ciutat
      *
-     * @return string 
+     * @return string
      */
     public function getCiutat()
     {
@@ -284,7 +301,7 @@ class Concert
     /**
      * Get adreca
      *
-     * @return string 
+     * @return string
      */
     public function getAdreca()
     {
@@ -307,7 +324,7 @@ class Concert
     /**
      * Get grups
      *
-     * @return string 
+     * @return string
      */
     public function getGrups()
     {
@@ -330,7 +347,7 @@ class Concert
     /**
      * Get preu
      *
-     * @return float 
+     * @return float
      */
     public function getPreu()
     {
@@ -353,7 +370,7 @@ class Concert
     /**
      * Get preuAnticipada
      *
-     * @return float 
+     * @return float
      */
     public function getPreuAnticipada()
     {
@@ -376,7 +393,7 @@ class Concert
     /**
      * Get comprar
      *
-     * @return string 
+     * @return string
      */
     public function getComprar()
     {
@@ -399,7 +416,7 @@ class Concert
     /**
      * Get arribar
      *
-     * @return string 
+     * @return string
      */
     public function getArribar()
     {
@@ -422,7 +439,7 @@ class Concert
     /**
      * Get mapa
      *
-     * @return string 
+     * @return string
      */
     public function getMapa()
     {
@@ -445,7 +462,7 @@ class Concert
     /**
      * Get cartellNom
      *
-     * @return string 
+     * @return string
      */
     public function getCartellNom()
     {
@@ -468,7 +485,7 @@ class Concert
     /**
      * Get cartellTipus
      *
-     * @return string 
+     * @return string
      */
     public function getCartellTipus()
     {
@@ -491,7 +508,7 @@ class Concert
     /**
      * Get cartellMida
      *
-     * @return integer 
+     * @return integer
      */
     public function getCartellMida()
     {
@@ -514,7 +531,7 @@ class Concert
     /**
      * Get textCat
      *
-     * @return string 
+     * @return string
      */
     public function getTextCat()
     {
@@ -537,7 +554,7 @@ class Concert
     /**
      * Get textCas
      *
-     * @return string 
+     * @return string
      */
     public function getTextCas()
     {
@@ -560,11 +577,28 @@ class Concert
     /**
      * Get textEng
      *
-     * @return string 
+     * @return string
      */
     public function getTextEng()
     {
         return $this->textEng;
+    }
+
+    /**
+     * Gets the corresponding text according to the locale
+     *
+     * @param string $locale
+     * @return string
+     */
+    public function getText($locale)
+    {
+        if ($locale == 'es') {
+            return $this->getTextCas();
+        } elseif ($locale == 'en') {
+            return $this->getTextEng();
+        } else {
+            return $this->getTextCat();
+        }
     }
 
     /**
@@ -583,7 +617,7 @@ class Concert
     /**
      * Get facebook
      *
-     * @return string 
+     * @return string
      */
     public function getFacebook()
     {
@@ -606,7 +640,7 @@ class Concert
     /**
      * Get cancelat
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getCancelat()
     {
