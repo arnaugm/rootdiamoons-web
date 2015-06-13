@@ -25,7 +25,6 @@
 				<div id="menu">
 					<ul>
                         <li class="inici">
-                            {%  dump app.request %}
                             <a href="{{ path('homepage') }}"{% if app.request.attributes.get('_route')  == 'homepage' %} class="sel"{% endif %}>{{ 'inici' | trans }}</a>
                         </li>
                         <li class="musica">
