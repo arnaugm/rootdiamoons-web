@@ -1,0 +1,4 @@
+subscribe:
+  email:
+    not_blank: Insert your email address
+    valid_email: Insert a valid email address

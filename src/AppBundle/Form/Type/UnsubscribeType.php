@@ -7,6 +7,10 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+/**
+ * Class UnsubscribeType
+ * @package AppBundle\Form\Type
+ */
 class UnsubscribeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -19,9 +23,11 @@ class UnsubscribeType extends AbstractType
                 ),
                 'constraints' => array(
                     new NotBlank(array(
-                        'message' => 'unsubs not blank',
+                        'message' => 'subscribe.email.not_blank',
                     )),
-                    new Email(),
+                    new Email(array(
+                        'message' => 'subscribe.email.valid_email',
+                    )),
                 ),
             ))
             ->add('send', 'submit', array(

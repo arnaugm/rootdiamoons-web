@@ -1,0 +1,4 @@
+subscribe:
+  email:
+    not_blank: Introdueix la teva adreça de correu
+    valid_email: Introdueix una adreça de correu vàlida
