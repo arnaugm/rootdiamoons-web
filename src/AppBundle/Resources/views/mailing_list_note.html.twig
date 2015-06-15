@@ -1,0 +1,9 @@
+            <div id="correu_nota">
+                {{ 'correu_nota' | trans({'%mailing_list_address%': mailing_list_address}) | raw }}
+            </div>
+            <p>
+                {{ 'correu_adreces1' | trans({'%link%': '<a href="mailto:' ~ subscribe_address ~ '">', '%subscribe_address%': subscribe_address, '%endlink%': '</a>'}) | raw }}
+            </p>
+            <p>
+                {{ 'correu_adreces2' | trans({'%link%': '<a href="mailto:' ~ unsubscribe_address ~ '">', '%unsubscribe_address%': unsubscribe_address, '%endlink%': '</a>'}) | raw }}
+            </p>

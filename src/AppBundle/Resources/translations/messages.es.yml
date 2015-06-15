@@ -80,13 +80,13 @@ adreca: dirección de correo
 boto_subs: suscribir
 baixa: Baja
 boto_unsubs: borrar
-correu_nota: "Nota: A menudo los mensajes enviados a través de listas de distribución son clasificados por los servidores de correo como spam. Asegurate que recibes los mensajes de <strong>llista@rootdiamoons.com</strong> a tu bandeja de entrada."
-correu_adreces1: "Para suscibirte también puedes enviar un mensaje en blanco a<br />llista-subscribe@rootdiamoons.com"
-correu_adreces2: "Para dejar de recibir mensajes también puedes enviar un mensaje en blanco a<br />llista-unsubscribe@rootdiamoons.com"
+correu_nota: "Nota: A menudo los mensajes enviados a través de listas de distribución son clasificados por los servidores de correo como spam. Asegurate que recibes los mensajes de <strong>%mailing_list_address%</strong> a tu bandeja de entrada."
+correu_adreces1: "Para suscibirte también puedes enviar un mensaje en blanco a<br />%link%%subscribe_address%%endlink%"
+correu_adreces2: "Para dejar de recibir mensajes también puedes enviar un mensaje en blanco a<br />%link%%unsubscribe_address%%endlink%"
 confirm_subs: "<strong>¡Fantástico!</strong><br />Una vez hayas respondido el mail de confirmación, habrás quedado <strong>inscrito</strong> satisfactoriamente en la lista de correo de Root Diamoons con la dirección"
 confirm_unsubs: "<strong>Bien</strong><br />Una vez hayas respondido el mail de confirmación, habrás quedado <strong>borrado</strong> satisfactoriamente de la lista de correo de Root Diamoons con la dirección"
-error_subs: "<strong>¡Ups!</strong><br />Ha habido un problema al realizar la subscripción. Por favor, inténtalo más tarde o envíanos un correo a <strong>rdinfo@rootdiamoons.com</strong>."
-error_unsubs: "<strong>¡Ups!</strong><br />Ha habido un problema al borrar la subscripción. Por favor, inténtalo más tarde o envíanos un correo a <strong>rdinfo@rootdiamoons.com</strong>."
+error_subs: "<strong>¡Ups!</strong><br />Ha habido un problema al realizar la subscripción. Por favor, inténtalo más tarde o envíanos un correo a <strong>%link%%info_address%%endlink%</strong>."
+error_unsubs: "<strong>¡Ups!</strong><br />Ha habido un problema al borrar la subscripción. Por favor, inténtalo más tarde o envíanos un correo a <strong>%link%%info_address%%endlink%</strong>."
 gracies: "¡Muchas gracias!"
 
 #generals

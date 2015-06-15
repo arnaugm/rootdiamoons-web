@@ -5,6 +5,10 @@ namespace AppBundle\Manager;
 use Swift_Mailer;
 use Swift_Message;
 
+/**
+ * Class SubscribeManager
+ * @package AppBundle\Manager
+ */
 class SubscribeManager
 {
     /**
@@ -25,8 +29,8 @@ class SubscribeManager
     /**
      * Constructor
      * @param Swift_Mailer $mailer
-     * @param array $subscribeAddresses
-     * @param array $unsubscribeAddresses
+     * @param array        $subscribeAddresses
+     * @param array        $unsubscribeAddresses
      */
     public function __construct(Swift_Mailer $mailer, array $subscribeAddresses, array $unsubscribeAddresses)
     {
@@ -38,7 +42,7 @@ class SubscribeManager
     public function subscribe($email)
     {
 //        $cos = 'Mail de subscripcio ' . $lang . ' - ' . $email;
-        $cos = 'Mail de subscripcio ' . ' - ' . $email;
+        $cos = 'Mail de subscripcio '.' - '.$email;
 
         $message = Swift_Message::newInstance()
             ->setSubject('Subscripcio')
@@ -54,7 +58,7 @@ class SubscribeManager
     public function unsubscribe($email)
     {
 //        $cos = 'Mail de borrat ' . $lang . ' - ' . $email;
-        $cos = 'Mail de borrat ' . ' - ' . $email;
+        $cos = 'Mail de borrat '.' - '.$email;
 
         $message = Swift_Message::newInstance()
             ->setSubject('Borrat')

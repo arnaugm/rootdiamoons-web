@@ -74,19 +74,19 @@ subscriute: Subscribe to our
 # llista_correu
 llista_correu: Newsletter
 correu_info: "To receive news about the band and announcements about next concerts give us your address.<br />To be deleted of the list introduce the address and click the button \"Delete\"."
-correu_info2: "You will recive a mail asking for a confirmation. Reply that mail to complete the subscription or unsubscription.<br /><br />By now the messages are <strong>only sent in catalan and spanish</strong>. If you are really interested in receive them in English make us notice it at <strong>rdinfo@rootdiamoons.com</strong>."
+correu_info2: "You will recive a mail asking for a confirmation. Reply that mail to complete the subscription or unsubscription.<br /><br />By now the messages are <strong>only sent in Catalan and Spanish</strong>. If you are really interested in receive them in English make us notice it at <strong>%link%%info_address%%endlink%</strong>."
 alta: Subscribe
 adreca: mail address
 boto_subs: subscribe
 baixa:  Unsubscribe
 boto_unsubs: delete
-correu_nota: "Note: Often messages sent through mailing list are classified for the mail servers as spam. Be sure that you recive the messages of <strong>llista@rootdiamoons.com</strong> in your mail box."
-correu_adreces1: "To be subscribed you can also send a blank message to<br />llista-subscribe@rootdiamoons.com"
-correu_adreces2: "To be unsubscribed you can also send a blank message to<br />llista-unsubscribe@rootdiamoons.com"
+correu_nota: "Note: Often messages sent through mailing list are classified for the mail servers as spam. Be sure that you recive the messages of <strong>%mailing_list_address%</strong> in your mail box."
+correu_adreces1: "To be subscribed you can also send a blank message to<br />%link%%subscribe_address%%endlink%"
+correu_adreces2: "To be unsubscribed you can also send a blank message to<br />%link%%unsubscribe_address%%endlink%"
 confirm_subs: "<strong>Great!</strong><br />Once you have replied the confirmation mail, you would have been satisfactorily <strong>subscribed</strong> at the Root Diamoons mailing list with the address"
 confirm_unsubs: "<strong>Ok</strong><br />Once you have replied the confirmation mail, you would have been satisfactorily <strong>deleted</strong> from the Root Diamoons mailing list with the address"
-error_subs: "<strong>Ups!</strong><br />There's been a problem during the subscription process. Please, try again later or send us an e-mail to <strong>rdinfo@rootdiamoons.com</strong>."
-error_unsubs: "<strong>Ups!</strong><br />There's been a problem during the unsubscription process. Please, try again later or send us an e-mail to <strong>rdinfo@rootdiamoons.com</strong>."
+error_subs: "<strong>Ups!</strong><br />There's been a problem during the subscription process. Please, try again later or send us an e-mail to <strong>%link%%info_address%%endlink%</strong>."
+error_unsubs: "<strong>Ups!</strong><br />There's been a problem during the unsubscription process. Please, try again later or send us an e-mail to <strong>%link%%info_address%%endlink%</strong>."
 gracies: "Thank you very much!"
 
 #generals

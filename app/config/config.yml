@@ -31,6 +31,10 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         ga_tracking: "%ga_tracking%"
+        info_address: "%info_address%"
+        mailing_list_address: "%mailing_list_address%"
+        subscribe_address: "%subscribe_address%"
+        unsubscribe_address: "%unsubscribe_address%"
     form_themes:
         - 'AppBundle::form/fields.html.twig'
 

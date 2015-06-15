@@ -80,13 +80,13 @@ adreca: adreça de correu
 boto_subs: subscriure
 baixa: Baixa
 boto_unsubs: borrar
-correu_nota: "Nota: Sovint els missatges enviats a través de llistes de distribució són classificats pels servidors de correu com a spam. Assegura't que rebs els missatges de <strong>llista@rootdiamoons.com</strong> a la teva bústia d'entrada."
-correu_adreces1: "Per subscriure't també pots enviar un missatge en blanc a<br />llista-subscribe@rootdiamoons.com"
-correu_adreces2: "Per deixar de rebre missatges també pots enviar un missatge en blanc a<br /> llista-unsubscribe@rootdiamoons.com"
+correu_nota: "Nota: Sovint els missatges enviats a través de llistes de distribució són classificats pels servidors de correu com a spam. Assegura't que rebs els missatges de <strong>%mailing_list_address%</strong> a la teva bústia d'entrada."
+correu_adreces1: "Per subscriure't també pots enviar un missatge en blanc a<br />%link%%subscribe_address%%endlink%"
+correu_adreces2: "Per deixar de rebre missatges també pots enviar un missatge en blanc a<br />%link%%unsubscribe_address%%endlink%"
 confirm_subs: "<strong>Fantàstic!</strong><br />Un cop hagis respost el mail de confirmació, hauràs quedat <strong>inscrit</strong> a la llista de correu de Root Diamoons amb l'adreça"
 confirm_unsubs: "<strong>Bé</strong><br />Un cop hagis respost el mail de confirmació, hauràs quedat <strong>borrat</strong> de la llista de correu de Root Diamoons amb l'adreça"
-error_subs: "<strong>Ups!</strong><br />Hi ha hagut un problema al realitzar la subscripció. Siusplau, intenta-ho més tard o envia'ns un correu a <strong>rdinfo@rootdiamoons.com</strong>."
-error_unsubs: "<strong>Ups!</strong><br />Hi ha hagut un problema al borrar la subscripció. Siusplau, intenta-ho més tard o envia'ns un correu a <strong>rdinfo@rootdiamoons.com</strong>."
+error_subs: "<strong>Ups!</strong><br />Hi ha hagut un problema al realitzar la subscripció. Siusplau, intenta-ho més tard o envia'ns un correu a <strong>%link%%info_address%%endlink%</strong>."
+error_unsubs: "<strong>Ups!</strong><br />Hi ha hagut un problema al borrar la subscripció. Siusplau, intenta-ho més tard o envia'ns un correu a <strong>%link%%info_address%%endlink%</strong>."
 gracies: "Moltes gràcies!"
 
 #generals

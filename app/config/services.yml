@@ -1,8 +1,3 @@
-# Learn more about services, parameters and containers at
-# http://symfony.com/doc/current/book/service_container.html
-parameters:
-#    parameter_name: value
-
 services:
     rootdiamoons_web.manager.concert:
         class: AppBundle\Manager\ConcertManager
@@ -17,5 +12,9 @@ services:
         class: AppBundle\Manager\SubscribeManager
         arguments:
             - @mailer
-            - %subscribe_addresses%
-            - %unsubscribe_addresses%
+            -
+                - %subscribe_address%
+                - %info_address%
+            -
+                - %unsubscribe_address%
+                - %info_address%

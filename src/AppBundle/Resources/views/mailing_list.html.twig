@@ -11,7 +11,7 @@
             <br />
             <br />
 
-            {{ 'correu_info2' | trans | raw }}
+            {{ 'correu_info2' | trans({'%link%': '<a href="mailto:' ~ info_address ~ '">', '%info_address%': info_address, '%endlink%': '</a>'}) | raw }}
             <br />
             <br />
 
@@ -50,15 +50,7 @@
             {{ form_errors(subscribeForm.email) }}
             {{ form_errors(unsubscribeForm.email) }}
 
-            <div id="correu_nota">
-                {{ 'correu_nota' | trans | raw }}
-            </div>
-            <p>
-                {{ 'correu_adreces1' | trans | raw }}
-            </p>
-            <p>
-                {{ 'correu_adreces2' | trans | raw }}
-            </p>
+            {% include 'AppBundle::mailing_list_note.html.twig' %}
         </div>
     </div>
 {% endblock %}
