@@ -12,6 +12,7 @@ services:
         class: AppBundle\Manager\SubscribeManager
         arguments:
             - @mailer
+            - @logger
             -
                 - %subscribe_address%
                 - %info_address%

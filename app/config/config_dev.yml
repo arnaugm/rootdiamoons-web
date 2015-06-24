@@ -12,14 +12,14 @@ web_profiler:
     intercept_redirects: false
 
 swiftmailer:
-    disable_delivery: true
+    disable_delivery: false
 
 monolog:
     handlers:
         main:
             type:   stream
             path:   "%kernel.logs_dir%/%kernel.environment%.log"
-            level:  debug
+            level:  error
         console:
             type:   console
             bubble: false

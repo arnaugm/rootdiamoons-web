@@ -63,10 +63,13 @@ class MainController extends Controller
         $nextConcerts = $this->concertManager->getNextConcerts();
         $pastConcerts = $this->concertManager->getPastConcerts();
 
-        return $this->render('AppBundle::concerts.html.twig', array(
-            'nextConcerts' => $nextConcerts,
-            'pastConcerts' => $pastConcerts,
-        ));
+        return $this->render(
+            'AppBundle::concerts.html.twig',
+            array(
+                'nextConcerts' => $nextConcerts,
+                'pastConcerts' => $pastConcerts,
+            )
+        );
     }
 
     public function photosAction()
@@ -81,11 +84,12 @@ class MainController extends Controller
         // check the file contains the extension .jpg, .jpeg or .png
         if ((stripos(strrev($img), strrev('.jpg')) !== 0) &&
             (stripos(strrev($img), strrev('.jpeg')) !== 0) &&
-            (stripos(strrev($img), strrev('.png')) !== 0)) {
+            (stripos(strrev($img), strrev('.png')) !== 0)
+        ) {
             throw new NotFoundHttpException();
         }
 
-        $file = $request->server->get('DOCUMENT_ROOT') . $img;
+        $file = $request->server->get('DOCUMENT_ROOT').$img;
 
         // check the file exists
         if (!is_file($file)) {
@@ -130,29 +134,38 @@ class MainController extends Controller
             $data = $subscribeForm->getData();
             $email = $data['email'];
 
-            $result = $this->subscribeManager->subscribe($email);
+            $result = $this->subscribeManager->subscribe($email, $request->getLocale());
 
-            return $this->render('AppBundle::subscribed.html.twig', array(
-                'error' => !$result,
-                'email' => $email,
-            ));
+            return $this->render(
+                'AppBundle::subscribed.html.twig',
+                array(
+                    'error' => !$result,
+                    'email' => $email,
+                )
+            );
         }
 
         if ($unsubscribeForm->get('send')->isClicked() && $unsubscribeForm->isValid()) {
             $data = $unsubscribeForm->getData();
             $email = $data['email'];
 
-            $result = $this->subscribeManager->unsubscribe($email);
+            $result = $this->subscribeManager->unsubscribe($email, $request->getLocale());
 
-            return $this->render('AppBundle::unsubscribed.html.twig', array(
-                'error' => !$result,
-                'email' => $email,
-            ));
+            return $this->render(
+                'AppBundle::unsubscribed.html.twig',
+                array(
+                    'error' => !$result,
+                    'email' => $email,
+                )
+            );
         }
 
-        return $this->render('AppBundle::mailing_list.html.twig', array(
-            'subscribeForm' => $subscribeForm->createView(),
-            'unsubscribeForm' => $unsubscribeForm->createView(),
-        ));
+        return $this->render(
+            'AppBundle::mailing_list.html.twig',
+            array(
+                'subscribeForm' => $subscribeForm->createView(),
+                'unsubscribeForm' => $unsubscribeForm->createView(),
+            )
+        );
     }
 }

@@ -38,6 +38,22 @@ twig:
     form_themes:
         - 'AppBundle::form/fields.html.twig'
 
+# Logging
+# Everything is logged in the <env> log file.
+# An email is sent when critical errors happen.
+monolog:
+    handlers:
+        main:
+            type:         stream
+            path:         %kernel.logs_dir%/%kernel.environment%.log
+            level:        error
+        email:
+            type:         swift_mailer
+            from_email:   %mailer_user%
+            to_email:     %info_address%
+            subject:      Web RD error
+            level:        critical
+
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
@@ -74,12 +90,14 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    port:      "%mailer_port%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
-    spool:     { type: memory }
+    transport:  "%mailer_transport%"
+    encryption: "%mailer_encryption%"
+    host:       "%mailer_host%"
+    port:       "%mailer_port%"
+    username:   "%mailer_user%"
+    password:   "%mailer_password%"
+#    spool:     { type: memory }
+    disable_delivery:  false
 
 easy_admin:
     entities:
