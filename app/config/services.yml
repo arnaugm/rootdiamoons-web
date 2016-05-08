@@ -2,7 +2,7 @@ services:
     rootdiamoons_web.manager.concert:
         class: AppBundle\Manager\ConcertManager
         arguments:
-            - @doctrine.orm.entity_manager
+            - '@doctrine.orm.entity_manager'
             - AppBundle\Entity\Concert
 
     rootdiamoons_web.manager.recop:
@@ -11,11 +11,11 @@ services:
     rootdiamoons_web.manager.subscribe:
         class: AppBundle\Manager\SubscribeManager
         arguments:
-            - @mailer
-            - @logger
+            - '@mailer'
+            - '@logger'
             -
-                - %subscribe_address%
-                - %info_address%
+                - '%subscribe_address%'
+                - '%info_address%'
             -
-                - %unsubscribe_address%
-                - %info_address%
+                - '%unsubscribe_address%'
+                - '%info_address%'

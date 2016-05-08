@@ -9,7 +9,7 @@ logout:
     path:      /admin/logout
 
 easy_admin_bundle:
-    resource: "@EasyAdminBundle/Controller/"
+    resource: '@EasyAdminBundle/Controller/'
     type:     annotation
     prefix:   /admin
 
@@ -17,31 +17,31 @@ homepage:
     path:      /{_locale}
     defaults:  { _controller: AppBundle:Main:homepage, _locale: ca }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 music:
     path:      /{_locale}/music
     defaults:  { _controller: AppBundle:Main:music }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 videos:
     path:      /{_locale}/videos
     defaults:  { _controller: AppBundle:Main:videos }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 concerts:
     path:      /{_locale}/concerts
     defaults:  { _controller: AppBundle:Main:concerts }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 photos:
     path:      /{_locale}/photos
     defaults:  { _controller: AppBundle:Main:photos }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 download_img:
     path:      /download-img
@@ -51,22 +51,22 @@ band:
     path:      /{_locale}/band
     defaults:  { _controller: AppBundle:Main:band }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 contact:
     path:      /{_locale}/contact
     defaults:  { _controller: AppBundle:Main:contact }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 issuu:
     path:      /{_locale}/issuu
     defaults:  { _controller: AppBundle:Main:issuu }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
 
 mailing_list:
     path:      /{_locale}/mailing-list
     defaults:  { _controller: AppBundle:Main:mailingList }
     requirements:
-        _locale: "%app.locales%"
+        _locale: '%app.locales%'
