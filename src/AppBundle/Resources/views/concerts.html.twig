@@ -37,7 +37,7 @@
                                 {% if nextConcert.preuAnticipada is not null %}
                                     {{ 'anticipada' | trans }}  {{ nextConcert.preuAnticipada | trans }}€ / {{ 'taquilla' | trans }} {{ nextConcert.preu | trans }}€
                                 {% else %}
-                                    {{ nextConcert.preu | trans }}
+                                    {{ nextConcert.preu | trans }}€
                                 {% endif %}
 
                                 {#{% if nextConcert.comprar is not null and nextConcert.comprar != '' %}#}
