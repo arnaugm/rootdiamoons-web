@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/arnaugm/band-accounting.git",
-                "reference": "6e0b3842e607f8cccc749c3ada7a277dee21c78e"
+                "reference": "34b3b420c5702c791e399f23a9729bbe79f77867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/arnaugm/band-accounting/zipball/6e0b3842e607f8cccc749c3ada7a277dee21c78e",
-                "reference": "6e0b3842e607f8cccc749c3ada7a277dee21c78e",
+                "url": "https://api.github.com/repos/arnaugm/band-accounting/zipball/34b3b420c5702c791e399f23a9729bbe79f77867",
+                "reference": "34b3b420c5702c791e399f23a9729bbe79f77867",
                 "shasum": ""
             },
             "require": {
@@ -82,7 +82,7 @@
                 "source": "https://github.com/arnaugm/band-accounting/tree/master",
                 "issues": "https://github.com/arnaugm/band-accounting/issues"
             },
-            "time": "2017-04-27 22:38:37"
+            "time": "2017-05-09 21:02:52"
         },
         {
             "name": "behat/transliterator",
