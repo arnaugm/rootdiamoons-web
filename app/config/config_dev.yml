@@ -49,3 +49,17 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+# Doctrine Configuration Sqlite
+doctrine:
+    dbal:
+        driver:   "%database_driver%"
+        path:     "%database_path%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  "%database_charset%"
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping: true

@@ -25,6 +25,11 @@ class User implements UserInterface, \Serializable
      */
     private $password;
 
+    /**
+     * @var string
+     */
+    private $salt;
+
 
     /**
      * Get id
@@ -60,15 +65,26 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * Set salt
+     *
+     * @param string $salt
+     * @return User
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+
+        return $this;
+    }
+
+    /**
      * Returns the salt that was originally used to encode the password.
      *
-     * This can return null if the password was not encoded using a salt.
-     *
-     * @return string|null The salt
+     * @return string The salt
      */
     public function getSalt()
     {
-        return null;
+        return $this->salt;
     }
 
     /**
@@ -110,8 +126,7 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
-            // see section on salt below
-            // $this->salt,
+            $this->salt,
         ));
     }
 
@@ -122,8 +137,7 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
-            // see section on salt below
-            // $this->salt
+            $this->salt,
             ) = unserialize($serialized);
     }
 }

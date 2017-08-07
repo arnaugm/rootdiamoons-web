@@ -13,6 +13,10 @@ easy_admin_bundle:
     type:     annotation
     prefix:   /admin
 
+band_accounting:
+    resource: '@RootDiamoonsBandAccountingBundle/Resources/config/routing.yml'
+    prefix:   /admin/accounting
+
 homepage:
     path:      /{_locale}
     defaults:  { _controller: AppBundle:Main:homepage, _locale: ca }
