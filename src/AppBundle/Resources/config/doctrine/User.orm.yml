@@ -27,4 +27,9 @@ AppBundle\Entity\User:
             length: 40
             fixed: true
             comment: ''
+        salt:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
     lifecycleCallbacks: {  }

@@ -39,3 +39,32 @@ The following aspects are configurable through the *parameters.yml* file:
 * Mailing list email address
 * Mailing list subscription email address 
 * Mailing list unsubscription email address
+
+## Development set up
+
+* Install dependencies
+```
+composer install
+```
+* Fill *parameters.yml* file
+* Create database
+```
+app/console doctrine:database:create
+app/console doctrine:schema:create
+```
+* Create admin user (admin/admin)
+```
+app/console doctrine:fixtures:load
+```
+* Clear cache
+```
+app/console cache:clear
+```
+* Start development server
+```
+app/console server:start --docroot=www
+```
+
+# Administration
+
+Access the administration section in /admin
