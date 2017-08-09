@@ -14,7 +14,7 @@ easy_admin_bundle:
     prefix:   /admin
 
 band_accounting:
-    resource: '@RootDiamoonsBandAccountingBundle/Resources/config/routing.yml'
+    resource: '@ArnauGMBandAccountingBundle/Resources/config/routing.yml'
     prefix:   /admin/accounting
 
 homepage:

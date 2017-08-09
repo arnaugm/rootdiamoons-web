@@ -1,5 +1,5 @@
 {
-    "name": "arnau/rootdiamoons-web",
+    "name": "arnaugm/rootdiamoons-web",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -8,12 +8,6 @@
             "SymfonyStandard": "app/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/arnaugm/band-accounting"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.7.*",
@@ -29,7 +23,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "javiereguiluz/easyadmin-bundle": "~1.2",
         "ircmaxell/password-compat": "^1.0",
-        "arnaugm/band-accounting": "dev-master@dev"
+        "arnaugm/band-accounting-bundle": "^2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",

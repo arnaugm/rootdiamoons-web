@@ -5,12 +5,8 @@
 /app/config/parameters_ovh.yml
 /app/logs/*
 !app/logs/.gitkeep
-/app/phpunit.xml
 /bin/
-test_db/
+/test_db/
 !test_db/.gitkeep
-/composer.phar
 /vendor/
-/bower_components/
-/web/bundles/
-/web/documents/
+/www/bundles/

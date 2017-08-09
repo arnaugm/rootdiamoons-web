@@ -4,85 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bacc90ff8c47cf14ff47ee8f3b7279e",
+    "content-hash": "2d8a3e6d152bd9d92e932bc42d17947a",
     "packages": [
         {
-            "name": "arnaugm/band-accounting",
-            "version": "dev-master",
+            "name": "arnaugm/band-accounting-bundle",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/arnaugm/band-accounting.git",
-                "reference": "34b3b420c5702c791e399f23a9729bbe79f77867"
+                "url": "https://github.com/arnaugm/band-accounting-bundle.git",
+                "reference": "3eefd35e6444ad8f2795b7d00494a02d0edb7ed9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/arnaugm/band-accounting/zipball/34b3b420c5702c791e399f23a9729bbe79f77867",
-                "reference": "34b3b420c5702c791e399f23a9729bbe79f77867",
+                "url": "https://api.github.com/repos/arnaugm/band-accounting-bundle/zipball/3eefd35e6444ad8f2795b7d00494a02d0edb7ed9",
+                "reference": "3eefd35e6444ad8f2795b7d00494a02d0edb7ed9",
                 "shasum": ""
             },
             "require": {
-                "doctrine/doctrine-bundle": "~1.2",
-                "doctrine/orm": "~2.2,>=2.2.3",
-                "incenteev/composer-parameter-handler": "~2.0",
+                "doctrine/common": "^2.4.0",
+                "doctrine/orm": "~2.3",
                 "php": ">=5.3.3",
-                "sensio/distribution-bundle": "~3.0",
-                "sensio/framework-extra-bundle": "~3.0",
-                "stof/doctrine-extensions-bundle": "~1.1@dev",
-                "symfony/assetic-bundle": "~2.3",
-                "symfony/monolog-bundle": "~2.4",
-                "symfony/swiftmailer-bundle": "~2.3",
-                "symfony/symfony": "2.7.*",
-                "twig/extensions": "~1.0"
+                "stof/doctrine-extensions-bundle": "^1.2",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/http-foundation": "~2.3"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.9",
-                "phpunit/phpunit": "^5.7",
-                "sensio/generator-bundle": "~2.3"
+                "phpunit/phpunit": "^5.7"
             },
-            "type": "project",
-            "extra": {
-                "symfony-app-dir": "app",
-                "symfony-web-dir": "web",
-                "symfony-assets-install": "relative",
-                "incenteev-parameters": {
-                    "file": "app/config/parameters.yml"
-                },
-                "branch-alias": {
-                    "dev-master": "2.6-dev"
-                }
-            },
+            "type": "symfony-bundle",
             "autoload": {
-                "psr-0": {
-                    "": "src/",
-                    "SymfonyStandard": "app/"
+                "psr-4": {
+                    "ArnauGM\\BandAccountingBundle\\": ""
                 }
             },
-            "scripts": {
-                "post-root-package-install": [
-                    "SymfonyStandard\\Composer::hookRootPackageInstall"
-                ],
-                "post-install-cmd": [
-                    "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
-                ],
-                "post-update-cmd": [
-                    "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-                    "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
-                ]
-            },
-            "support": {
-                "source": "https://github.com/arnaugm/band-accounting/tree/master",
-                "issues": "https://github.com/arnaugm/band-accounting/issues"
-            },
-            "time": "2017-05-09T21:02:52+00:00"
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Arnau González",
+                    "email": "arnaugm@gmail.com"
+                }
+            ],
+            "description": "Accounting system for music bands",
+            "homepage": "https://github.com/arnaugm/band-accounting",
+            "keywords": [
+                "Accounting",
+                "backend",
+                "band",
+                "music"
+            ],
+            "time": "2017-08-09T19:40:54+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -2459,9 +2431,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "arnaugm/band-accounting": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
