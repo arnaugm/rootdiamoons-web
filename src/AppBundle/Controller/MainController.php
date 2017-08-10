@@ -116,11 +116,6 @@ class MainController extends Controller
         return $this->render('AppBundle::contact.html.twig');
     }
 
-    public function issuuAction()
-    {
-        return $this->render('AppBundle::issuu.html.twig');
-    }
-
     public function mailingListAction(Request $request)
     {
         $subscribeForm = $this->createForm(new SubscribeType());

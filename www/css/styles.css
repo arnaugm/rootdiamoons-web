@@ -739,14 +739,6 @@ a.nom_component {
 
 #issuu_embed {
 	margin-top: 30px;
-	text-align: center;
-}
-
-#issuu_embed iframe {
-	width: 649px;
-	height: 510px;
-	border: none;
-	overflow: hidden;
 }
 
 #newsletter {

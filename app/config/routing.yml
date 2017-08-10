@@ -63,12 +63,6 @@ contact:
     requirements:
         _locale: '%app.locales%'
 
-issuu:
-    path:      /{_locale}/issuu
-    defaults:  { _controller: AppBundle:Main:issuu }
-    requirements:
-        _locale: '%app.locales%'
-
 mailing_list:
     path:      /{_locale}/mailing-list
     defaults:  { _controller: AppBundle:Main:mailingList }

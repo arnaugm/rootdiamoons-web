@@ -24,7 +24,7 @@
             <br class="clearboth">
         </div>
         <div id="issuu_embed">
-            <iframe src="{{ path('issuu') }}"></iframe>
+            {% include 'AppBundle::issuu.html.twig' %}
         </div>
         <div id="newsletter">
             <a href="{{ path('mailing_list') }}">
