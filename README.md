@@ -43,25 +43,29 @@ The following aspects are configurable through the *parameters.yml* file:
 ## Development set up
 
 * Install dependencies
-```
+```bash
 composer install
 ```
 * Fill *parameters.yml* file
 * Create database
-```
+```bash
 app/console doctrine:database:create
 app/console doctrine:schema:create
 ```
 * Create admin user (admin/admin)
-```
+```bash
 app/console doctrine:fixtures:load
 ```
-* Clear cache
+* Install web assets
+```bash
+app/console assets:install --symlink www
 ```
+* Clear cache
+```bash
 app/console cache:clear
 ```
 * Start development server
-```
+```bash
 app/console server:start --docroot=www
 ```
 
