@@ -86,6 +86,7 @@ swiftmailer:
     disable_delivery:  false
 
 easy_admin:
+    site_name: 'Root Diamoons Admin'
     entities:
         Concert:
             class: AppBundle\Entity\Concert

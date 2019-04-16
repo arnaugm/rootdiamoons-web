@@ -2,6 +2,7 @@
 /app/cache/*
 !app/cache/.gitkeep
 /app/config/parameters.yml
+/app/config/parameters_local.yml
 /app/config/parameters_ovh.yml
 /app/logs/*
 !app/logs/.gitkeep

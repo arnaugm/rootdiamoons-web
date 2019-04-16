@@ -9,7 +9,7 @@ logout:
     path:      /admin/logout
 
 easy_admin_bundle:
-    resource: '@EasyAdminBundle/Controller/'
+    resource: '@EasyAdminBundle/Controller/AdminController.php'
     type:     annotation
     prefix:   /admin
 
