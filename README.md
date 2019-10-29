@@ -40,8 +40,12 @@ The following aspects are configurable through the *parameters.yml* file:
 * Mailing list subscription email address 
 * Mailing list unsubscription email address
 
-## Development set up
+## Development setup
 
+* Manage PHP version using [PHPBrew](https://github.com/phpbrew/phpbrew)
+```bash
+phpbrew use php56
+```
 * Install dependencies
 ```bash
 composer install
