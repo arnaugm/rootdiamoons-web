@@ -2,8 +2,10 @@
 
 namespace AppBundle\Manager;
 
+use Exception;
 use AppBundle\Repository\ConcertRepository;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Bridge\Monolog\Logger;
 
 class ConcertManager
 {
@@ -18,26 +20,47 @@ class ConcertManager
     protected $concertRepository;
 
     /**
+     * @var Logger
+     */
+    protected $logger;
+
+    /**
      * Constructor
      *
      * @param ObjectManager $om
-     * @param $concertClass
+     * @param               $concertClass
+     * @param Logger        $logger
      */
-    public function __construct(ObjectManager $om, $concertClass)
+    public function __construct(ObjectManager $om, $concertClass, Logger $logger)
     {
         $this->om = $om;
         $this->concertRepository = $om->getRepository($concertClass);
+        $this->logger = $logger;
     }
 
     public function getNextConcerts()
     {
-        return $this->concertRepository
-            ->findNextConcerts();
+        try {
+            return $this->concertRepository
+                ->findNextConcerts();
+
+        } catch (Exception $e) {
+            $this->logger->critical('Error fetching next concerts: '.$e->getMessage());
+
+            return array();
+        }
     }
 
     public function getPastConcerts()
     {
-        return $this->concertRepository
-            ->findPastConcerts();
+        try {
+            return $this->concertRepository
+                ->findPastConcerts();
+
+        } catch (Exception $e) {
+            $this->logger->critical('Error fetching past concerts: '.$e->getMessage());
+
+            return array();
+        }
     }
-} 
+}
