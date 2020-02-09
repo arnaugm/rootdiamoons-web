@@ -1,0 +1,66 @@
+login:
+  path:      /admin/login
+  controller: App\Controller\SecurityController::login
+
+login_check:
+  path:      /admin/login_check
+
+logout:
+  path:      /admin/logout
+
+#band_accounting:
+#  resource: '@ArnauGMBandAccountingBundle/Resources/config/routing.yml'
+#  prefix:   /admin/accounting
+
+homepage:
+  path:      /{_locale}
+  controller: App\Controller\MainController::homepage
+  defaults:  { _locale: ca }
+  requirements:
+    _locale: '%app.locales%'
+
+music:
+  path:      /{_locale}/music
+  controller: App\Controller\MainController::music
+  requirements:
+    _locale: '%app.locales%'
+
+videos:
+  path:      /{_locale}/videos
+  controller: App\Controller\MainController::videos
+  requirements:
+    _locale: '%app.locales%'
+
+concerts:
+  path:      /{_locale}/concerts
+  controller: App\Controller\MainController::concerts
+  requirements:
+    _locale: '%app.locales%'
+
+photos:
+  path:      /{_locale}/photos
+  controller: App\Controller\MainController::photos
+  requirements:
+    _locale: '%app.locales%'
+
+download_img:
+  path:      /download-img
+  controller: App\Controller\MainController::downloadImg
+
+band:
+  path:      /{_locale}/band
+  controller: App\Controller\MainController::band
+  requirements:
+    _locale: '%app.locales%'
+
+contact:
+  path:      /{_locale}/contact
+  controller: App\Controller\MainController::contact
+  requirements:
+    _locale: '%app.locales%'
+
+mailing_list:
+  path:      /{_locale}/mailing-list
+  controller: App\Controller\MainController::mailingList
+  requirements:
+    _locale: '%app.locales%'

@@ -1,15 +1,16 @@
-/app/bootstrap.php.cache
-/app/cache/*
-!app/cache/.gitkeep
-/app/config/parameters.yml
-/app/config/parameters_local.yml
-/app/config/parameters_ovh.yml
-/app/logs/*
-!app/logs/.gitkeep
-/bin/
-/bower_components/
-/test_db/
-!test_db/.gitkeep
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
 /vendor/
-/www/bundles/
-/www/.htaccess
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###

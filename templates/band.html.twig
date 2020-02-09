@@ -1,0 +1,70 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Root Diamoons - {{ 'grup' | trans }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+{% endblock %}
+
+{% block content %}
+    <div id="grup" class="primer_bloc ultim_bloc">
+
+        <h2>{{ 'grup' | trans }}</h2>
+
+        <img src="{{ asset('images/foto_ombra_dalt.png') }}" alt="" />
+        <img src="{{ asset('images/foto_grup_2014.jpg') }}" alt="foto grup" />
+        <img src="{{ asset('images/foto_ombra_baix.png') }}" alt="" />
+        <div id="components_grup">
+            <table>
+                <tr>
+                    <td id="primera_col">
+                        <a href="{{ asset('images/grup/anna.jpg') }}" rel="prettyPhoto[grup]" title="Anna Olivella - {{ 'cantant' | trans }}" class="nom_component">Anna Olivella</a><br />
+                        <span class="instrument">{{ 'cantant' | trans }}</span>
+                    </td>
+                    <td id="segona_col">
+                        <a href="{{ asset('images/grup/jep.jpg') }}" rel="prettyPhoto[grup]" title="Jep Jorba - {{ 'trombo' | trans }}" class="nom_component">Jep Jorba</a><br />
+                        <span class="instrument">{{ 'trombo' | trans }}</span>
+                    </td>
+                    <td id="tercera_col">
+                        <a href="{{ asset('images/grup/pau.jpg') }}" rel="prettyPhoto[grup]" title="Pau Garcia - {{ 'teclats' | trans }}" class="nom_component">Pau Garcia</a><br />
+                        <span class="instrument">{{ 'teclats' | trans }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="{{ asset('images/grup/xavi.jpg') }}" rel="prettyPhoto[grup]" title="Xavi Casanovas - {{ 'trompeta' | trans }}" class="nom_component">Xavi Casanovas</a><br />
+                        <span class="instrument">{{ 'trompeta' | trans }}</span>
+                    </td>
+                    <td>
+                        <a href="{{ asset('images/grup/toldra.jpg') }}" rel="prettyPhoto[grup]" title="Adrià Toldrà - {{ 'guitarra' | trans }}" class="nom_component">Adrià Toldrà</a><br />
+                        <span class="instrument">{{ 'guitarra' | trans }}</span>
+                    </td>
+                    <td>
+                        <a href="{{ asset('images/grup/joan.jpg') }}" rel="prettyPhoto[grup]" title="Joan Llansana - {{ 'baix' | trans }}" class="nom_component">Joan Llansana</a><br />
+                        <span class="instrument">{{ 'baix' | trans }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="{{ asset('images/grup/arnau.jpg') }}" rel="prettyPhoto[grup]" title="Arnau González - {{ 'saxo_tenor' | trans }}" class="nom_component">Arnau González</a><br />
+                        <span class="instrument">{{ 'saxo_tenor' | trans }}</span>
+                    </td>
+                    <td>
+                        <a href="{{ asset('images/grup/marti.jpg') }}" rel="prettyPhoto[grup]" title="Martí Lázaro - {{ 'bateria' | trans }}" class="nom_component">Martí Lázaro</a><br />
+                        <span class="instrument">{{ 'bateria' | trans }}</span>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('vendor/prettyphoto/js/jquery.prettyPhoto.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('js/photos.js') }}"></script>
+{% endblock %}
