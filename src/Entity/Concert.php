@@ -5,569 +5,350 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Concert
+ * @ORM\Entity(repositoryClass="App\Repository\ConcertRepository")
+ * @ORM\Table(name="concerts")
  */
 class Concert
 {
     /**
-     * @var integer
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
-     * @var \DateTime
+     * @ORM\Column(type="datetime")
      */
     private $data;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
     private $concertCat;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
     private $concertCas;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
     private $concertEng;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
     private $lloc;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=100)
      */
     private $ciutat;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=500)
      */
     private $adreca;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=200)
      */
     private $grups;
 
     /**
-     * @var float
+     * @ORM\Column(type="float")
      */
     private $preu;
 
     /**
-     * @var float
+     * @ORM\Column(type="float", nullable=true)
      */
     private $preuAnticipada;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $comprar;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=500, nullable=true)
      */
     private $arribar;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=500, nullable=true)
      */
     private $mapa;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=200, nullable=true)
      */
     private $cartellNom;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=200, nullable=true)
      */
     private $cartellTipus;
 
     /**
-     * @var integer
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $cartellMida;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=500)
      */
     private $textCat;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=500)
      */
     private $textCas;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=500)
      */
     private $textEng;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $facebook;
 
     /**
-     * @var boolean
+     * @ORM\Column(type="boolean")
      */
     private $cancelat;
 
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * Set data
-     *
-     * @param \DateTime $data
-     * @return Concert
-     */
-    public function setData($data)
+    public function getData(): ?\DateTimeInterface
+    {
+        return $this->data;
+    }
+
+    public function setData(\DateTimeInterface $data): self
     {
         $this->data = $data;
 
         return $this;
     }
 
-    /**
-     * Get data
-     *
-     * @return \DateTime
-     */
-    public function getData()
+    public function getConcertCat(): ?string
     {
-        return $this->data;
+        return $this->concertCat;
     }
 
-    /**
-     * Set concertCat
-     *
-     * @param string $concertCat
-     * @return Concert
-     */
-    public function setConcertCat($concertCat)
+    public function setConcertCat(string $concertCat): self
     {
         $this->concertCat = $concertCat;
 
         return $this;
     }
 
-    /**
-     * Get concertCat
-     *
-     * @return string
-     */
-    public function getConcertCat()
+    public function getConcertCas(): ?string
     {
-        return $this->concertCat;
+        return $this->concertCas;
     }
 
-    /**
-     * Set concertCas
-     *
-     * @param string $concertCas
-     * @return Concert
-     */
-    public function setConcertCas($concertCas)
+    public function setConcertCas(string $concertCas): self
     {
         $this->concertCas = $concertCas;
 
         return $this;
     }
 
-    /**
-     * Get concertCas
-     *
-     * @return string
-     */
-    public function getConcertCas()
+    public function getConcertEng(): ?string
     {
-        return $this->concertCas;
+        return $this->concertEng;
     }
 
-    /**
-     * Set concertEng
-     *
-     * @param string $concertEng
-     * @return Concert
-     */
-    public function setConcertEng($concertEng)
+    public function setConcertEng(string $concertEng): self
     {
         $this->concertEng = $concertEng;
 
         return $this;
     }
 
-    /**
-     * Get concertEng
-     *
-     * @return string
-     */
-    public function getConcertEng()
+    public function getLloc(): ?string
     {
-        return $this->concertEng;
+        return $this->lloc;
     }
 
-    /**
-     * Gets the corresponding concert name according to the locale
-     *
-     * @param string $locale
-     * @return string
-     */
-    public function getConcert($locale)
-    {
-        if ($locale == 'es') {
-            return $this->getConcertCas();
-        } elseif ($locale == 'en') {
-            return $this->getConcertEng();
-        } else {
-            return $this->getConcertCat();
-        }
-    }
-
-    /**
-     * Set lloc
-     *
-     * @param string $lloc
-     * @return Concert
-     */
-    public function setLloc($lloc)
+    public function setLloc(string $lloc): self
     {
         $this->lloc = $lloc;
 
         return $this;
     }
 
-    /**
-     * Get lloc
-     *
-     * @return string
-     */
-    public function getLloc()
+    public function getCiutat(): ?string
     {
-        return $this->lloc;
+        return $this->ciutat;
     }
 
-    /**
-     * Set ciutat
-     *
-     * @param string $ciutat
-     * @return Concert
-     */
-    public function setCiutat($ciutat)
+    public function setCiutat(string $ciutat): self
     {
         $this->ciutat = $ciutat;
 
         return $this;
     }
 
-    /**
-     * Get ciutat
-     *
-     * @return string
-     */
-    public function getCiutat()
+    public function getAdreca(): ?string
     {
-        return $this->ciutat;
+        return $this->adreca;
     }
 
-    /**
-     * Set adreca
-     *
-     * @param string $adreca
-     * @return Concert
-     */
-    public function setAdreca($adreca)
+    public function setAdreca(string $adreca): self
     {
         $this->adreca = $adreca;
 
         return $this;
     }
 
-    /**
-     * Get adreca
-     *
-     * @return string
-     */
-    public function getAdreca()
+    public function getGrups(): ?string
     {
-        return $this->adreca;
+        return $this->grups;
     }
 
-    /**
-     * Set grups
-     *
-     * @param string $grups
-     * @return Concert
-     */
-    public function setGrups($grups)
+    public function setGrups(string $grups): self
     {
         $this->grups = $grups;
 
         return $this;
     }
 
-    /**
-     * Get grups
-     *
-     * @return string
-     */
-    public function getGrups()
+    public function getPreu(): ?float
     {
-        return $this->grups;
+        return $this->preu;
     }
 
-    /**
-     * Set preu
-     *
-     * @param float $preu
-     * @return Concert
-     */
-    public function setPreu($preu)
+    public function setPreu(float $preu): self
     {
         $this->preu = $preu;
 
         return $this;
     }
 
-    /**
-     * Get preu
-     *
-     * @return float
-     */
-    public function getPreu()
+    public function getPreuAnticipada(): ?float
     {
-        return $this->preu;
+        return $this->preuAnticipada;
     }
 
-    /**
-     * Set preuAnticipada
-     *
-     * @param float $preuAnticipada
-     * @return Concert
-     */
-    public function setPreuAnticipada($preuAnticipada)
+    public function setPreuAnticipada(?float $preuAnticipada): self
     {
         $this->preuAnticipada = $preuAnticipada;
 
         return $this;
     }
 
-    /**
-     * Get preuAnticipada
-     *
-     * @return float
-     */
-    public function getPreuAnticipada()
+    public function getComprar(): ?string
     {
-        return $this->preuAnticipada;
+        return $this->comprar;
     }
 
-    /**
-     * Set comprar
-     *
-     * @param string $comprar
-     * @return Concert
-     */
-    public function setComprar($comprar)
+    public function setComprar(?string $comprar): self
     {
         $this->comprar = $comprar;
 
         return $this;
     }
 
-    /**
-     * Get comprar
-     *
-     * @return string
-     */
-    public function getComprar()
+    public function getArribar(): ?string
     {
-        return $this->comprar;
+        return $this->arribar;
     }
 
-    /**
-     * Set arribar
-     *
-     * @param string $arribar
-     * @return Concert
-     */
-    public function setArribar($arribar)
+    public function setArribar(?string $arribar): self
     {
         $this->arribar = $arribar;
 
         return $this;
     }
 
-    /**
-     * Get arribar
-     *
-     * @return string
-     */
-    public function getArribar()
+    public function getMapa(): ?string
     {
-        return $this->arribar;
+        return $this->mapa;
     }
 
-    /**
-     * Set mapa
-     *
-     * @param string $mapa
-     * @return Concert
-     */
-    public function setMapa($mapa)
+    public function setMapa(?string $mapa): self
     {
         $this->mapa = $mapa;
 
         return $this;
     }
 
-    /**
-     * Get mapa
-     *
-     * @return string
-     */
-    public function getMapa()
+    public function getCartellNom(): ?string
     {
-        return $this->mapa;
+        return $this->cartellNom;
     }
 
-    /**
-     * Set cartellNom
-     *
-     * @param string $cartellNom
-     * @return Concert
-     */
-    public function setCartellNom($cartellNom)
+    public function setCartellNom(?string $cartellNom): self
     {
         $this->cartellNom = $cartellNom;
 
         return $this;
     }
 
-    /**
-     * Get cartellNom
-     *
-     * @return string
-     */
-    public function getCartellNom()
+    public function getCartellTipus(): ?string
     {
-        return $this->cartellNom;
+        return $this->cartellTipus;
     }
 
-    /**
-     * Set cartellTipus
-     *
-     * @param string $cartellTipus
-     * @return Concert
-     */
-    public function setCartellTipus($cartellTipus)
+    public function setCartellTipus(?string $cartellTipus): self
     {
         $this->cartellTipus = $cartellTipus;
 
         return $this;
     }
 
-    /**
-     * Get cartellTipus
-     *
-     * @return string
-     */
-    public function getCartellTipus()
+    public function getCartellMida(): ?int
     {
-        return $this->cartellTipus;
+        return $this->cartellMida;
     }
 
-    /**
-     * Set cartellMida
-     *
-     * @param integer $cartellMida
-     * @return Concert
-     */
-    public function setCartellMida($cartellMida)
+    public function setCartellMida(?int $cartellMida): self
     {
         $this->cartellMida = $cartellMida;
 
         return $this;
     }
 
-    /**
-     * Get cartellMida
-     *
-     * @return integer
-     */
-    public function getCartellMida()
+    public function getTextCat(): ?string
     {
-        return $this->cartellMida;
+        return $this->textCat;
     }
 
-    /**
-     * Set textCat
-     *
-     * @param string $textCat
-     * @return Concert
-     */
-    public function setTextCat($textCat)
+    public function setTextCat(string $textCat): self
     {
         $this->textCat = $textCat;
 
         return $this;
     }
 
-    /**
-     * Get textCat
-     *
-     * @return string
-     */
-    public function getTextCat()
+    public function getTextCas(): ?string
     {
-        return $this->textCat;
+        return $this->textCas;
     }
 
-    /**
-     * Set textCas
-     *
-     * @param string $textCas
-     * @return Concert
-     */
-    public function setTextCas($textCas)
+    public function setTextCas(string $textCas): self
     {
         $this->textCas = $textCas;
 
         return $this;
     }
 
-    /**
-     * Get textCas
-     *
-     * @return string
-     */
-    public function getTextCas()
+    public function getTextEng(): ?string
     {
-        return $this->textCas;
+        return $this->textEng;
     }
 
-    /**
-     * Set textEng
-     *
-     * @param string $textEng
-     * @return Concert
-     */
-    public function setTextEng($textEng)
+    public function setTextEng(string $textEng): self
     {
         $this->textEng = $textEng;
 
@@ -575,22 +356,11 @@ class Concert
     }
 
     /**
-     * Get textEng
-     *
-     * @return string
-     */
-    public function getTextEng()
-    {
-        return $this->textEng;
-    }
-
-    /**
      * Gets the corresponding text according to the locale
-     *
      * @param string $locale
-     * @return string
+     * @return string|null
      */
-    public function getText($locale)
+    public function getText(string $locale): ?string
     {
         if ($locale == 'es') {
             return $this->getTextCas();
@@ -601,49 +371,27 @@ class Concert
         }
     }
 
-    /**
-     * Set facebook
-     *
-     * @param string $facebook
-     * @return Concert
-     */
-    public function setFacebook($facebook)
+    public function getFacebook(): ?string
+    {
+        return $this->facebook;
+    }
+
+    public function setFacebook(?string $facebook): self
     {
         $this->facebook = $facebook;
 
         return $this;
     }
 
-    /**
-     * Get facebook
-     *
-     * @return string
-     */
-    public function getFacebook()
+    public function getCancelat(): ?bool
     {
-        return $this->facebook;
+        return $this->cancelat;
     }
 
-    /**
-     * Set cancelat
-     *
-     * @param boolean $cancelat
-     * @return Concert
-     */
-    public function setCancelat($cancelat)
+    public function setCancelat(bool $cancelat): self
     {
         $this->cancelat = $cancelat;
 
         return $this;
-    }
-
-    /**
-     * Get cancelat
-     *
-     * @return boolean
-     */
-    public function getCancelat()
-    {
-        return $this->cancelat;
     }
 }

@@ -3,6 +3,8 @@
 namespace App\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -12,7 +14,7 @@ class SubscribeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', 'email', array(
+            ->add('email', EmailType::class, array(
                 'label'  => 'alta',
                 'attr' => array(
                     'placeholder' => 'adreca',
@@ -26,7 +28,7 @@ class SubscribeType extends AbstractType
                     )),
                 ),
             ))
-            ->add('send', 'submit', array(
+            ->add('send', SubmitType::class, array(
                 'label'  => 'boto_subs',
             ));
     }

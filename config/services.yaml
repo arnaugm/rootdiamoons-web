@@ -47,21 +47,11 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-#    rootdiamoons_web.manager.concert:
-#        class: App\Manager\ConcertManager
-#        arguments:
-#            - '@doctrine.orm.entity_manager'
-#            - App\Entity\Concert
-#            - '@logger'
-
-    rootdiamoons_web.manager.subscribe:
-        class: App\Manager\SubscribeManager
+    App\Manager\SubscribeManager:
         arguments:
-            - '@mailer'
-            - '@logger'
-            -
+            $subscribeAddresses:
                 - '%subscribe_address%'
                 - '%info_address%'
-            -
+            $unsubscribeAddresses:
                 - '%unsubscribe_address%'
                 - '%info_address%'

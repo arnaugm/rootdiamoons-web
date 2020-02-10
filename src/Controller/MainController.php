@@ -8,7 +8,6 @@ use App\Manager\ConcertManager;
 use App\Manager\RecopManager;
 use App\Manager\SubscribeManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
@@ -16,29 +15,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class MainController extends AbstractController
 {
-//    /**
-//     * @var ConcertManager
-//     */
-//    protected $concertManager;
-//
-//    /**
-//     * @var RecopManager
-//     */
-//    protected $recopManager;
-//
-//    /**
-//     * @var SubscribeManager
-//     */
-//    protected $subscribeManager;
-
-//    public function setContainer(ContainerInterface $container = null)
-//    {
-//        parent::setContainer($container);
-//        $this->concertManager = $this->get('rootdiamoons_web.manager.concert');
-//        $this->recopManager = $this->get('rootdiamoons_web.manager.recop');
-//        $this->subscribeManager = $this->get('rootdiamoons_web.manager.subscribe');
-//    }
-
     public function homepage(ConcertManager $concertManager)
     {
         $nextConcerts = $concertManager->getNextConcerts();
@@ -118,9 +94,9 @@ class MainController extends AbstractController
 
     public function mailingList(Request $request, SubscribeManager $subscribeManager)
     {
-        $subscribeForm = $this->createForm(new SubscribeType());
+        $subscribeForm = $this->createForm(SubscribeType::class);
 
-        $unsubscribeForm = $this->createForm(new UnsubscribeType());
+        $unsubscribeForm = $this->createForm(UnsubscribeType::class);
 
         $subscribeForm->handleRequest($request);
         $unsubscribeForm->handleRequest($request);

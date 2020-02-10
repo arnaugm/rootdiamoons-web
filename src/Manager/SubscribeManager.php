@@ -3,19 +3,20 @@
 namespace App\Manager;
 
 use Exception;
-use Swift_Mailer;
-use Swift_Message;
-use Symfony\Bridge\Monolog\Logger;
+use Psr\Log\LoggerInterface;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 
 class SubscribeManager
 {
     /**
-     * @var Swift_Mailer
+     * @var MailerInterface
      */
     protected $mailer;
 
     /**
-     * @var Logger
+     * @var LoggerInterface
      */
     protected $logger;
 
@@ -31,14 +32,14 @@ class SubscribeManager
 
     /**
      * Constructor
-     * @param Swift_Mailer $mailer
-     * @param Logger       $logger
-     * @param array        $subscribeAddresses
-     * @param array        $unsubscribeAddresses
+     * @param MailerInterface   $mailer
+     * @param LoggerInterface   $logger
+     * @param array             $subscribeAddresses
+     * @param array             $unsubscribeAddresses
      */
     public function __construct(
-        Swift_Mailer $mailer,
-        Logger $logger,
+        MailerInterface $mailer,
+        LoggerInterface $logger,
         array $subscribeAddresses,
         array $unsubscribeAddresses
     ) {
@@ -59,14 +60,14 @@ class SubscribeManager
     {
         $cos = 'Mail de subscripció '.$lang.' - '.$email;
 
-        $message = Swift_Message::newInstance()
-            ->setSubject('Subscripció')
-            ->setFrom(array($email => $email))
-            ->setTo(array_combine($this->subscribeAddresses, $this->subscribeAddresses))
-            ->setBody($cos, 'text/html');
+        $email = (new Email())
+            ->from(array($email => $email))
+            ->to(array_combine($this->subscribeAddresses, $this->subscribeAddresses))
+            ->subject('Subscripció')
+            ->html($cos);
 
         try {
-            $result = $this->mailer->send($message);
+            $result = $this->mailer->send($email);
 
         } catch (Exception $e) {
             $this->logger->critical('Error sending subscription email: '.$e->getMessage());
@@ -75,7 +76,7 @@ class SubscribeManager
         }
 
         if ($result <= 0) {
-            $this->logger->critical('Subscription email not sent: '.$message->toString());
+            $this->logger->critical('Subscription email not sent: '.$email->toString());
         }
 
         return $result > 0;
@@ -87,19 +88,20 @@ class SubscribeManager
      * @param string $email
      * @param string $lang
      * @return bool
+     * @throws TransportExceptionInterface
      */
     public function unsubscribe($email, $lang)
     {
         $cos = 'Mail de borrat '.$lang.' - '.$email;
 
-        $message = Swift_Message::newInstance()
-            ->setSubject('Borrat')
-            ->setFrom(array($email => $email))
-            ->setTo(array_combine($this->unsubscribeAddresses, $this->unsubscribeAddresses))
-            ->setBody($cos, 'text/html');
+        $email = (new Email())
+            ->from(array($email => $email))
+            ->to(array_combine($this->unsubscribeAddresses, $this->unsubscribeAddresses))
+            ->subject('Borrat')
+            ->html($cos);
 
         try {
-            $result = $this->mailer->send($message);
+            $result = $this->mailer->send($email);
 
         } catch (Exception $e) {
             $this->logger->critical('Error sending unsubscription email: '.$e->getMessage());
@@ -108,7 +110,7 @@ class SubscribeManager
         }
 
         if ($result <= 0) {
-            $this->logger->critical('Unsubscription email not sent: '.$message->toString());
+            $this->logger->critical('Unsubscription email not sent: '.$email->toString());
         }
 
         return $result > 0;

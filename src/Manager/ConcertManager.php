@@ -2,19 +2,12 @@
 
 namespace App\Manager;
 
-use App\Entity\Concert;
-use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use App\Repository\ConcertRepository;
 use Psr\Log\LoggerInterface;
 
 class ConcertManager
 {
-    /**
-     * @var EntityManagerInterface
-     */
-    protected $em;
-
     /**
      * @var ConcertRepository
      */
@@ -28,13 +21,12 @@ class ConcertManager
     /**
      * Constructor
      *
-     * @param EntityManagerInterface    $em
+     * @param ConcertRepository         $concertRepository
      * @param LoggerInterface           $logger
      */
-    public function __construct(EntityManagerInterface $em, LoggerInterface $logger)
+    public function __construct(ConcertRepository $concertRepository, LoggerInterface $logger)
     {
-        $this->em = $em;
-        $this->concertRepository = $em->getRepository(Concert::class);
+        $this->concertRepository = $concertRepository;
         $this->logger = $logger;
     }
 
