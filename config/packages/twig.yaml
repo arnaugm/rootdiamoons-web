@@ -9,3 +9,5 @@ twig:
         mailing_list_address: '%mailing_list_address%'
         subscribe_address: '%subscribe_address%'
         unsubscribe_address: '%unsubscribe_address%'
+    form_themes:
+        - 'form/fields.html.twig'

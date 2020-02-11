@@ -4,14 +4,13 @@ namespace App\Manager;
 
 use Exception;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
+use Swift_Mailer;
+use Swift_Message;
 
 class SubscribeManager
 {
     /**
-     * @var MailerInterface
+     * @var Swift_Mailer
      */
     protected $mailer;
 
@@ -32,13 +31,13 @@ class SubscribeManager
 
     /**
      * Constructor
-     * @param MailerInterface   $mailer
+     * @param Swift_Mailer      $mailer
      * @param LoggerInterface   $logger
      * @param array             $subscribeAddresses
      * @param array             $unsubscribeAddresses
      */
     public function __construct(
-        MailerInterface $mailer,
+        Swift_Mailer $mailer,
         LoggerInterface $logger,
         array $subscribeAddresses,
         array $unsubscribeAddresses
@@ -60,14 +59,13 @@ class SubscribeManager
     {
         $cos = 'Mail de subscripció '.$lang.' - '.$email;
 
-        $email = (new Email())
-            ->from(array($email => $email))
-            ->to(array_combine($this->subscribeAddresses, $this->subscribeAddresses))
-            ->subject('Subscripció')
-            ->html($cos);
+        $message = (new Swift_Message('Subscripció'))
+            ->setFrom($email)
+            ->setTo($this->subscribeAddresses)
+            ->setBody($cos);
 
         try {
-            $result = $this->mailer->send($email);
+            $result = $this->mailer->send($message);
 
         } catch (Exception $e) {
             $this->logger->critical('Error sending subscription email: '.$e->getMessage());
@@ -76,7 +74,7 @@ class SubscribeManager
         }
 
         if ($result <= 0) {
-            $this->logger->critical('Subscription email not sent: '.$email->toString());
+            $this->logger->critical('Subscription email not sent: '.$message->toString());
         }
 
         return $result > 0;
@@ -88,20 +86,18 @@ class SubscribeManager
      * @param string $email
      * @param string $lang
      * @return bool
-     * @throws TransportExceptionInterface
      */
     public function unsubscribe($email, $lang)
     {
         $cos = 'Mail de borrat '.$lang.' - '.$email;
 
-        $email = (new Email())
-            ->from(array($email => $email))
-            ->to(array_combine($this->unsubscribeAddresses, $this->unsubscribeAddresses))
-            ->subject('Borrat')
-            ->html($cos);
+        $message = (new Swift_Message('Borrat'))
+            ->setFrom($email)
+            ->setTo($this->unsubscribeAddresses)
+            ->setBody($cos);
 
         try {
-            $result = $this->mailer->send($email);
+            $result = $this->mailer->send($message);
 
         } catch (Exception $e) {
             $this->logger->critical('Error sending unsubscription email: '.$e->getMessage());
@@ -110,7 +106,7 @@ class SubscribeManager
         }
 
         if ($result <= 0) {
-            $this->logger->critical('Unsubscription email not sent: '.$email->toString());
+            $this->logger->critical('Unsubscription email not sent: '.$message->toString());
         }
 
         return $result > 0;
