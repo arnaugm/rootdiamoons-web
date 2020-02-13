@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div id="video_home">
+        <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/Dno5YU_w_PI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="separador_video">&nbsp;</div>
+    <div id="noticia">
+        {{ 'destacat_1' | trans }}<br/>
+
+        <div class="titol1">Fàcil</div>
+        {{ 'destacat_2' | trans }}
+    </div>
+    {%  if nextConcerts is not empty %}
+    <div id="concerts">
+        <h2>{{ 'concerts' | trans }}</h2>
+        <table>
+        {%  for concert in nextConcerts %}
+            <tr>
+                <td class="destacat data_concert_home">{{ concert.data | date('d/m/y') }}</td>
+                <td class="destacat lloc_concert_home">{{ concert.lloc }}</td>
+                <td class="destacat mes_info"><a href="{{ path('concerts') }}">{{ 'mes_info' | trans }}.</a></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="text_concert_home" colspan="2">{{ concert.getText(app.request.locale) }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+{% endblock %}

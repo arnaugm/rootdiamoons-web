@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="contenidor">
+        <div id="cos">
+            {% include 'head.html.twig' %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    <div id="contenidor_peu">
+        {% include 'foot.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+{% endblock %}

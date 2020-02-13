@@ -44,7 +44,7 @@ The following aspects are configurable through the *parameters.yml* file:
 
 * Manage PHP version using [PHPBrew](https://github.com/phpbrew/phpbrew)
 ```bash
-phpbrew use php56
+phpbrew use php73
 ```
 * Install dependencies
 ```bash
@@ -70,7 +70,7 @@ app/console cache:clear
 ```
 * Start development server
 ```bash
-app/console server:start --docroot=www
+symfony server:start
 ```
 
 # Administration

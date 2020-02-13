@@ -1,0 +1,38 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Root Diamoons - {{ 'contacte' | trans }}{% endblock %}
+
+{% block content %}
+    <div id="contacte" class="primer_bloc ultim_bloc">
+        <h2>{{ 'contacte' | trans }}</h2>
+        <div id="mail">
+            <img src="{{ asset('images/mail.png') }}" alt="mail" />
+        </div>
+        <div class="destacat descarregues_contacte">
+            <div class="nom_document">{{ 'rider_tecnic' | trans }}</div>
+            <div class="descarrega_document">- <a href="{{ asset('documents/rider_rd.pdf') }}">{{ 'descarregar_pdf' | trans }}</a></div>
+            <br class="clearboth">
+        </div>
+        <div class="destacat descarregues_contacte">
+            <div class="nom_document">{{ 'dossier_premsa' | trans }}</div>
+            <div class="descarrega_document">- <a href="{{ asset('documents/dossier_rd_cat.pdf') }}">català</a> - <a href="{{ asset('documents/dossier_rd_cas.pdf') }}">castellano</a></div>
+            <br class="clearboth">
+        </div>
+        <div class="destacat descarregues_contacte">
+            <div class="nom_document">{{ 'fotos' | trans }}</div>
+            <div class="descarrega_document">- <a href="{{ asset('documents/fotos_premsa_rd_alta.zip') }}">{{ 'alta_qualitat' | trans }}</a> - <a href="{{ asset('documents/fotos_premsa_rd_baixa.zip') }}">{{ 'baixa_qualitat' | trans }}</a></div>
+            <br class="clearboth">
+        </div>
+        <div id="newsletter">
+            <a href="{{ path('mailing_list') }}">
+                <div>
+                    {{ 'subscriute' | trans }}<br />
+                    <span>{{ 'llista_correu' | trans }}</span>
+                </div>
+            </a>
+        </div>
+        <div id="credits">
+            {{ 'disseny' | trans }} <a href="http://www.martilazaro.com" target="_blank">Martí Làzaro</a> / {{ 'programacio' | trans }} <a href="https://www.twitter.com/arnaugmasso" target="_blank">Arnau González</a>
+        </div>
+    </div>
+{% endblock %}
