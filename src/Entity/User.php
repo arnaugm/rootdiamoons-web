@@ -3,141 +3,73 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * User
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="users")
  */
-class User implements UserInterface, \Serializable
+class User
 {
     /**
-     * @var integer
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=255)
      */
     private $username;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=40)
      */
     private $password;
 
     /**
-     * @var string
+     * @ORM\Column(type="string", length=255)
      */
     private $salt;
 
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * Set username
-     *
-     * @param string $username
-     * @return User
-     */
-    public function setUsername($username)
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
     {
         $this->username = $username;
 
         return $this;
     }
 
-    /**
-     * Get username
-     *
-     * @return string
-     */
-    public function getUsername()
+    public function getPassword(): ?string
     {
-        return $this->username;
+        return $this->password;
     }
 
-    /**
-     * Set salt
-     *
-     * @param string $salt
-     * @return User
-     */
-    public function setSalt($salt)
-    {
-        $this->salt = $salt;
-
-        return $this;
-    }
-
-    /**
-     * Returns the salt that was originally used to encode the password.
-     *
-     * @return string The salt
-     */
-    public function getSalt()
-    {
-        return $this->salt;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     * @return User
-     */
-    public function setPassword($password)
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 
         return $this;
     }
 
-    /**
-     * Get password
-     *
-     * @return string
-     */
-    public function getPassword()
+    public function getSalt(): ?string
     {
-        return $this->password;
+        return $this->salt;
     }
 
-    public function getRoles()
+    public function setSalt(string $salt): self
     {
-        return array('ROLE_ADMIN');
-    }
+        $this->salt = $salt;
 
-    public function eraseCredentials()
-    {
-    }
-
-    /** @see \Serializable::serialize() */
-    public function serialize()
-    {
-        return serialize(array(
-            $this->id,
-            $this->username,
-            $this->password,
-            $this->salt,
-        ));
-    }
-
-    /** @see \Serializable::unserialize() */
-    public function unserialize($serialized)
-    {
-        list (
-            $this->id,
-            $this->username,
-            $this->password,
-            $this->salt,
-            ) = unserialize($serialized);
+        return $this;
     }
 }
