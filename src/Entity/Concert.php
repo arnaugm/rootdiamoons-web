@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -121,6 +122,13 @@ class Concert
      * @ORM\Column(type="boolean")
      */
     private $cancelat;
+
+    public function __construct()
+    {
+        $now = new DateTime();
+        $today = $now->format('Y-m-d');
+        $this->data = new DateTime($today);
+    }
 
     public function getId(): ?int
     {
