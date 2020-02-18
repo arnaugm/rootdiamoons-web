@@ -73,6 +73,18 @@ app/console cache:clear
 symfony server:start
 ```
 
+## Tests
+
+* Run tests suite
+```bash
+bin/phpunit
+```
+
+* Run tests suite with coverage
+```bash
+bin/phpunit --coverage-html coverage
+```
+
 # Administration
 
 Access the administration section in /admin
