@@ -54,7 +54,7 @@ class Concert
     private $adreca;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=200, nullable=true)
      */
     private $grups;
 
@@ -181,6 +181,23 @@ class Concert
         $this->concertEng = $concertEng;
 
         return $this;
+    }
+
+    /**
+     * Gets the corresponding concert name according to the locale
+     *
+     * @param string $locale
+     * @return string
+     */
+    public function getConcert($locale)
+    {
+        if ($locale == 'es') {
+            return $this->getConcertCas();
+        } elseif ($locale == 'en') {
+            return $this->getConcertEng();
+        } else {
+            return $this->getConcertCat();
+        }
     }
 
     public function getLloc(): ?string
