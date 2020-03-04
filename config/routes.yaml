@@ -2,6 +2,10 @@
 #  resource: '@ArnauGMBandAccountingBundle/Resources/config/routing.yml'
 #  prefix:   /admin/accounting
 
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
 app_logout:
     path: /logout
     methods: GET
