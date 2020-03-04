@@ -1,16 +1,14 @@
-login:
-  path:      /admin/login
-  controller: App\Controller\SecurityController::login
-
-login_check:
-  path:      /admin/login_check
-
-logout:
-  path:      /admin/logout
-
 #band_accounting:
 #  resource: '@ArnauGMBandAccountingBundle/Resources/config/routing.yml'
 #  prefix:   /admin/accounting
+
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /logout
+    methods: GET
 
 homepage:
   path:      /{_locale}

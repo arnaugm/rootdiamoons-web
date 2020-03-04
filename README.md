@@ -2,6 +2,8 @@
 
 This is the website of the catalan jamaican music band Root Diamoons. The content is available in Catalan, Spanish and English.
 
+[![Codeship Status for arnaugm/rootdiamoons-web](https://app.codeship.com/projects/7f3fd120-67c8-0133-3fcb-7e77e7cef63b/status?branch=master)](https://app.codeship.com/projects/114137)
+
 ## Technologies
 
 The site uses the full stack version of the **Symfony** framework and JavaScript libraries to help in the font-end. The concerts section of the site is constantly updated with scheduled shows. To manage that, **Easy Admin Bundle** provides a password protected administration panel.
@@ -71,6 +73,18 @@ app/console cache:clear
 * Start development server
 ```bash
 symfony server:start
+```
+
+## Tests
+
+* Run tests suite
+```bash
+bin/phpunit
+```
+
+* Run tests suite with coverage
+```bash
+bin/phpunit --coverage-html coverage
 ```
 
 # Administration

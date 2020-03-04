@@ -1,6 +1,42 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+    site_name: 'Root Diamoons Admin'
+    entities:
+        Concert:
+            class: App\Entity\Concert
+            list:
+                fields:
+                    - data
+                    - concertCat
+                    - concertCas
+                    - concertEng
+                    - lloc
+                    - ciutat
+                    - adreca
+                    - grups
+                    - preu
+                    - { property: 'mapa', type: 'url' }
+                    - { property: 'cartellNom', type: 'file', base_path: 'images/cartells' }
+                    - cancelat
+            form:
+                fields:
+                    - data
+                    - { property: 'concertCat', help: 'Nom de l''esdeveniment o lloc en català' }
+                    - { property: 'concertCas', help: 'Nom de l''esdeveniment o lloc en castellà' }
+                    - { property: 'concertEng', help: 'Nom de l''esdeveniment o lloc en anglès' }
+                    - { property: 'textCat', type: 'textarea', help: 'Explicació del concert en català i altres grups entre cometes' }
+                    - { property: 'textCas', type: 'textarea', help: 'Explicació del concert en castellà i altres grups entre cometes' }
+                    - { property: 'textEng', type: 'textarea', help: 'Explicació del concert en anglès i altres grups entre cometes' }
+                    - { property: 'lloc', help: 'sala, bar, carrer, ciutat, ...' }
+                    - ciutat
+                    - adreca
+                    - { property: 'grups', help: 'nom dels altres grups separats per comes' }
+                    - { property: 'preu', type: 'money' }
+                    - { property: 'preuAnticipada', type: 'money' }
+                    - { property: 'comprar', help: 'lloc=>url' }
+                    - arribar
+                    - { property: 'mapa', help: 'URL curta de google maps' }
+                    - { property: 'cartellNom', type: 'file' }
+                    - { property: 'facebook', help: 'URL de l''esdeveniment' }
+                    - cancelat
+        User:
+            class: App\Entity\User

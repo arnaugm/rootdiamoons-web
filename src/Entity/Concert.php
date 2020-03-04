@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -53,7 +54,7 @@ class Concert
     private $adreca;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=200, nullable=true)
      */
     private $grups;
 
@@ -122,6 +123,13 @@ class Concert
      */
     private $cancelat;
 
+    public function __construct()
+    {
+        $now = new DateTime();
+        $today = $now->format('Y-m-d');
+        $this->data = new DateTime($today);
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -173,6 +181,23 @@ class Concert
         $this->concertEng = $concertEng;
 
         return $this;
+    }
+
+    /**
+     * Gets the corresponding concert name according to the locale
+     *
+     * @param string $locale
+     * @return string
+     */
+    public function getConcert($locale)
+    {
+        if ($locale == 'es') {
+            return $this->getConcertCas();
+        } elseif ($locale == 'en') {
+            return $this->getConcertEng();
+        } else {
+            return $this->getConcertCat();
+        }
     }
 
     public function getLloc(): ?string
