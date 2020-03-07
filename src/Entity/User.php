@@ -24,14 +24,9 @@ class User implements UserInterface
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=60)
+     * @ORM\Column(type="string", length=100)
      */
     private $password;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $salt;
 
     public function getId(): ?int
     {
@@ -62,18 +57,6 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getSalt(): ?string
-    {
-        return $this->salt;
-    }
-
-    public function setSalt(string $salt): self
-    {
-        $this->salt = $salt;
-
-        return $this;
-    }
-
     /**
      * @inheritDoc
      */
@@ -86,6 +69,13 @@ class User implements UserInterface
      * @inheritDoc
      */
     public function eraseCredentials()
+    {
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSalt()
     {
     }
 }
