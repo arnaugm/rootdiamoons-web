@@ -1,0 +1,72 @@
+#video_home {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+#video_home iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#separador_video {
+    height: 2px;
+    font-size: 0;
+    background-color: #e6e1bd;
+    margin-top: 30px;
+}
+
+#noticia {
+    font-size: 32px;
+    color: #fcfef9;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+    text-align: center;
+    padding: 23px 0 15px 0;
+}
+
+.titol1 {
+    font-size: 80px;
+    color: #e4e2a2;
+    line-height: 80px;
+}
+
+#concerts {
+    padding-bottom: 30px;
+}
+
+#concerts h2 {
+    padding: 13px 0 0 2px;
+}
+
+#concerts table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 0 1px;
+}
+
+td.data_concert_home {
+    font-size: 25px;
+    width: 87px;
+}
+
+td.lloc_concert_home {
+    font-size: 25px;
+    color: #e4e2a2;
+}
+
+td.mes_info {
+    font-size: 11px;
+    text-align: right;
+    padding: 0 11px 6px 0;
+}
+
+td.text_concert_home {
+    font-size: 12px;
+    padding: 3px 0 17px 6px;
+    font-style: italic;
+}

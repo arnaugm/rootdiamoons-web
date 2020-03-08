@@ -2,6 +2,11 @@
 
 {% block title %}Root Diamoons - {{ 'musica' | trans }}{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/music.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block content %}
     <div id="discografia" class="primer_bloc">
 
@@ -20,7 +25,7 @@
             </div>
             <div class="detalls_disc">
                 <div class="destacat">
-                    <div class="titol_disc">Fàcil</div> <div class="any_disc">La Panchita Records, 2016</div><br class="clearboth" />
+                    <div class="titol_disc">Fàcil</div> <div class="any_disc">La Panchita Records, 2016</div>
                 </div>
                 <div class="llsita_cancons">
                     1. Desafiant La Realitat<br />
@@ -35,7 +40,6 @@
                 </div>
                 <div class="signatura">Root Diamoons</div>
             </div>
-            <br class="clearboth" />
         </div>
 
         <div class="disc">
@@ -51,7 +55,7 @@
             </div>
             <div class="detalls_disc">
                 <div class="destacat">
-                    <div class="titol_disc">Tot al seu temps</div> <div class="any_disc">Brixton Records, 2012</div><br class="clearboth" />
+                    <div class="titol_disc">Tot al seu temps</div> <div class="any_disc">Brixton Records, 2012</div>
                 </div>
                 <div class="llsita_cancons">
                     1. Introduint<br />
@@ -76,7 +80,6 @@
                 </div>
                 <div class="signatura">Larry ACR</div>
             </div>
-            <br class="clearboth" />
         </div>
 
         <div class="disc">
@@ -92,7 +95,7 @@
             </div>
             <div class="detalls_disc">
                 <div class="destacat">
-                    <div class="titol_disc">With other eyes</div>&nbsp;&nbsp;<div class="any_disc">Silver Bullets (Brixton Records), 2008*</div><br class="clearboth" />
+                    <div class="titol_disc">With other eyes</div>&nbsp;&nbsp;<div class="any_disc">Silver Bullets (Brixton Records), 2008*</div>
                 </div>
                 <div class="llsita_cancons">
                     1. From Jamaica<br />
@@ -114,12 +117,10 @@
                     {{ 'text_woe' | trans | raw }}
                 </div>
                 <div class="signatura">Larry ACR</div>
-                <br class="clearboth" />
-                <div class="nota_disc">
+                 <div class="nota_disc">
                     *{{ 'edicio_japo' | trans }}
                 </div>
             </div>
-            <br class="clearboth" />
         </div>
     </div>
 
@@ -148,5 +149,4 @@
         {% endfor %}
 
     </div>
-    <br class="clearboth" />
 {% endblock %}

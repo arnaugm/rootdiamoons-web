@@ -1,0 +1,102 @@
+#proxims_concerts {
+    padding-bottom: 110px;
+}
+
+.proxim {
+    font-size: 14px;
+    padding: 15px 0 25px 3px;
+}
+
+.proxim table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 0 -2px;
+}
+
+.data_concert {
+    font-size: 25px;
+    padding: 3px 0 0 5px;
+    width: 90px;
+}
+
+.nom_concert {
+    font-size: 25px;
+    color: #e4e2a2;
+    padding: 3px 0 0 3px;
+}
+
+.detalls_concert {
+    padding: 8px 0 0 4px;
+}
+
+.lloc_concert {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.text_concert {
+    font-style: italic;
+}
+
+.links_concert {
+    padding: 15px 0 0 97px;
+    font-size: 11px;
+    color: #e4e2a2;
+}
+
+#llista_anys {
+    padding-top: 25px;
+}
+
+.any_concert {
+    font-size: 25px;
+    padding: 0 0 0 7px;
+    color: #e4e2a2;
+    margin-bottom: 9px;
+}
+
+.llista_concerts_any {
+    max-width: 570px;
+    padding: 7px 0 38px 99px;
+}
+
+@media (max-width: 758px) {
+    .llista_concerts_any {
+        padding-left: 11px;
+    }
+}
+
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/ui-icons_ffffff_256x240.png);
+    float: right;
+    margin: 6px 14px 0 0;
+}
+
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+
+.separador_concert_anterior {
+    background-color: #e6e1bd;
+    height: 1px;
+    margin: 11px 0;
+}
+
+.data_concert_anterior {
+    font-size: 20px;
+    padding: 3px 0 2px 0;
+}
+
+.text_concert_anterior {
+    font-style: italic;
+}
+
+.links_concert_anterior {
+    font-size: 11px;
+    color: #e4e2a2;
+}

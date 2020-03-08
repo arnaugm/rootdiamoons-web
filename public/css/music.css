@@ -1,0 +1,121 @@
+.disc {
+    display: flex;
+    flex-direction: row;
+    padding: 19px 0 48px 0;
+    line-height: 16px;
+}
+
+@media (max-width: 758px) {
+    .disc {
+        flex-direction: column;
+    }
+}
+
+.caratula_disc {
+    float: left;
+    width: 266px;
+}
+
+@media (max-width: 758px) {
+    .caratula_disc {
+        padding-left: 11px;
+    }
+}
+
+.links_disc {
+    padding: 10px 0 10px 3px;
+    font-size: 11px;
+    color: #e4e2a2;
+}
+
+.detalls_disc {
+    display: flex;
+    flex-direction: column;
+    max-width: 491px;
+}
+
+.titol_disc {
+    font-size: 25px;
+}
+
+.any_disc {
+    color: #e4e2a2;
+    font-size: 13px;
+    padding-left: 8px;
+}
+
+.llsita_cancons {
+    color: #e4e2a2;
+    font-size: 13px;
+    padding: 16px 0 0 11px;
+}
+
+.colab {
+    font-style: italic;
+    font-size: 11px;
+    color: #fcfef9;
+}
+
+.text_disc {
+    padding: 18px 0 0 11px;
+    text-align: justify;
+}
+
+@media (max-width: 758px) {
+    .text_disc {
+        padding-right: 11px;
+    }
+}
+
+.nota_disc {
+    padding-left: 11px;
+    font-size: 11px;
+}
+
+.recop {
+    padding: 19px 0 30px 0;
+    line-height: 16px;
+    width: 250px;
+    height: 450px;
+    float: left;
+}
+
+@media (max-width: 758px) {
+    .recop {
+        height: auto;
+    }
+}
+
+.recop_cap {
+    padding: 9px 0 6px 12px;
+    height: 50px;
+}
+
+.recop_titol {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.recop_edita {
+    color: #e4e2a2;
+    font-size: 13px;
+}
+
+.recop_caratula {
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.recop_text {
+    padding: 0 12px 0 12px;
+}
+
+.recop_tema {
+    color: #e4e2a2;
+    font-size: 13px;
+    padding: 0 0 15px 12px;
+}
+
+.recop_tema_label {
+    font-weight: bold;
+}

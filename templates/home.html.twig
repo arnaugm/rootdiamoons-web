@@ -1,8 +1,13 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/home.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block content %}
     <div id="video_home">
-        <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/Dno5YU_w_PI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Dno5YU_w_PI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div id="separador_video">&nbsp;</div>
     <div id="noticia">

@@ -10,8 +10,56 @@
     <div id="contenidor_peu">
         {% include 'foot.html.twig' %}
     </div>
+    <div id="drawer">
+        <div id="drawer_menu">
+             <ul>
+                <li>
+                    <a href="{{ path('homepage') }}"{% if app.request.attributes.get('_route')  == 'homepage' %} class="sel"{% endif %}>{{ 'inici' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('music') }}"{% if app.request.attributes.get('_route')  == 'music' %} class="sel"{% endif %}>{{ 'musica' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('videos') }}"{% if app.request.attributes.get('_route')  == 'videos' %} class="sel"{% endif %}>{{ 'videos' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('concerts') }}"{% if app.request.attributes.get('_route')  == 'concerts' %} class="sel"{% endif %}>{{ 'concerts' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('photos') }}"{% if app.request.attributes.get('_route')  == 'photos' %} class="sel"{% endif %}>{{ 'fotos' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('band') }}"{% if app.request.attributes.get('_route')  == 'band' %} class="sel"{% endif %}>{{ 'grup' | trans }}</a>
+                </li>
+                <li>
+                    <a href="{{ path('contact') }}"{% if app.request.attributes.get('_route')  == 'contact' %} class="sel"{% endif %}>{{ 'contacte' | trans }}</a>
+                </li>
+            </ul>
+            <button id="drawer_menu_close" type="button">X</button>
+        </div>
+        <div id="idiomes_mobile">
+￼           {% if app.request.locale == 'ca' %}
+                <span class="sel">Cat</span>
+            {% else %}
+                <a href="{{ path(app.request.get('_route'), { _locale: 'ca'}) }}">Cat</a>
+            {% endif %}
+
+            {% if app.request.locale == 'es' %}
+                <span class="sel">Cas</span>
+            {% else %}
+                <a href="{{ path(app.request.get('_route'), { _locale: 'es'}) }}">Cas</a>
+            {% endif %}
+
+            {% if app.request.locale == 'en' %}
+                <span class="sel">Eng</span>
+            {% else %}
+                <a href="{{ path(app.request.get('_route'), { _locale: 'en'}) }}">Eng</a>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 {% endblock %}

@@ -4,7 +4,8 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+    <link href="{{ asset('css/photos.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -16,9 +17,9 @@
             <div class="text_album">
                 <span class="titol_album">Boca Nord</span> <span class="detall_album">- Presentació RD2014</span>
             </div>
-            <img src="{{ asset('images/foto_ombra_dalt.png') }}" alt="" />
-            <a href="{{ asset('images/albums/boca_nord/boca_nord_01.jpg') }}" rel="prettyPhoto[boca_nord]" title="Boca Nord - Presentació RD2014"><img src="{{ asset('images/albums/boca_nord/boca_nord_00.jpg') }}" alt="" /></a>
-            <img src="{{ asset('images/foto_ombra_baix.png') }}" alt="" />
+            <img src="{{ asset('images/foto_ombra_dalt.png') }}" class="shadow_image" alt="" />
+            <a href="{{ asset('images/albums/boca_nord/boca_nord_01.jpg') }}" rel="prettyPhoto[boca_nord]" title="Boca Nord - Presentació RD2014"><img src="{{ asset('images/albums/boca_nord/boca_nord_00.jpg') }}" class="max_width_image" alt="" /></a>
+            <img src="{{ asset('images/foto_ombra_baix.png') }}" class="shadow_image" alt="" />
             <div class="llista_album">
                 <a href="{{ asset('images/albums/boca_nord/boca_nord_02.jpg') }}" rel="prettyPhoto[boca_nord]" title="Boca Nord - Presentació RD2014">boca_nord_02</a>
                 <a href="{{ asset('images/albums/boca_nord/boca_nord_03.jpg') }}" rel="prettyPhoto[boca_nord]" title="Boca Nord - Presentació RD2014">boca_nord_03</a>
@@ -38,9 +39,9 @@
             <div class="text_album">
                 <span class="titol_album">Tot al seu temps</span> <span class="detall_album">- Cafè del Centre</span>
             </div>
-            <img src="{{ asset('images/foto_ombra_dalt.png') }}" alt="" />
-            <a href="{{ asset('images/albums/tast/tast_01.jpg') }}" rel="prettyPhoto[tast]" title="Tot al seu temps - Cafè del Centre"><img src="{{ asset('images/albums/tast/tast_00.jpg') }}" alt="" /></a>
-            <img src="{{ asset('images/foto_ombra_baix.png') }}" alt="" />
+            <img src="{{ asset('images/foto_ombra_dalt.png') }}" class="shadow_image" alt="" />
+            <a href="{{ asset('images/albums/tast/tast_01.jpg') }}" rel="prettyPhoto[tast]" title="Tot al seu temps - Cafè del Centre"><img src="{{ asset('images/albums/tast/tast_00.jpg') }}" class="max_width_image" alt="" /></a>
+            <img src="{{ asset('images/foto_ombra_baix.png') }}" class="shadow_image" alt="" />
             <div class="llista_album">
                 <a href="{{ asset('images/albums/tast/tast_02.jpg') }}" rel="prettyPhoto[tast]" title="Tot al seu temps - Cafè del Centre">tast_02</a>
                 <a href="{{ asset('images/albums/tast/tast_03.jpg') }}" rel="prettyPhoto[tast]" title="Tot al seu temps - Cafè del Centre">tast_03</a>
@@ -57,9 +58,9 @@
             <div class="text_album">
                 <span class="titol_album">Rototom Sunsplash 2011</span> <span class="detall_album">- {{ 'amb_rico' | trans }}</span>
             </div>
-            <img src="{{ asset('images/foto_ombra_dalt.png') }}" alt="" />
-            <a href="{{ asset('images/albums/rototom/rototom_01.jpg') }}" rel="prettyPhoto[rototom]" title="Rototom Sunsplash 2011"><img src="{{ asset('images/albums/rototom/rototom_00.jpg') }}" alt="" /></a>
-            <img src="{{ asset('images/foto_ombra_baix.png') }}" alt="" />
+            <img src="{{ asset('images/foto_ombra_dalt.png') }}" class="shadow_image" alt="" />
+            <a href="{{ asset('images/albums/rototom/rototom_01.jpg') }}" rel="prettyPhoto[rototom]" title="Rototom Sunsplash 2011"><img src="{{ asset('images/albums/rototom/rototom_00.jpg') }}" class="max_width_image" alt="" /></a>
+            <img src="{{ asset('images/foto_ombra_baix.png') }}" class="shadow_image" alt="" />
             <div class="llista_album">
                 <a href="{{ asset('images/albums/rototom/rototom_02.jpg') }}" rel="prettyPhoto[rototom]" title="Rototom Sunsplash 2011">rototom_02</a>
                 <a href="{{ asset('images/albums/rototom/rototom_03.jpg') }}" rel="prettyPhoto[rototom]" title="Rototom Sunsplash 2011">rototom_03</a>
