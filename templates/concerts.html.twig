@@ -4,7 +4,8 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+    <link href="{{ asset('css/concerts.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block content %}

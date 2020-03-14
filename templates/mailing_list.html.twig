@@ -2,6 +2,11 @@
 
 {% block title %}Root Diamoons - {{ 'llista_correu' | trans }}{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/mailing_list.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block content %}
     <div id="llista_correu" class="primer_bloc ultim_bloc">
         <h2>{{ 'llista_correu' | trans }}</h2>
@@ -16,35 +21,31 @@
             <br />
 
             {{ form_start(subscribeForm, {'attr': {'novalidate': 'novalidate'}}) }}
-                <table>
-                    <tr>
-                        <td class="destacat llista_accio">
-                            {{ form_label(subscribeForm.email) }}
-                        </td>
-                        <td class="destacat llista_input">
-                            {{ form_widget(subscribeForm.email) }}
-                        </td>
-                        <td class="destacat llista_submit">
-                            -{{ form_widget(subscribeForm.send) }}
-                        </td>
-                    </tr>
-                </table>
+            <div class="destacat mailing_list_form">
+                <div class="llista_accio">
+                    {{ form_label(subscribeForm.email) }}
+                </div>
+                <div class="llista_input">
+                    {{ form_widget(subscribeForm.email) }}
+                </div>
+                <div class="llista_submit">
+                    <span>-</span>{{ form_widget(subscribeForm.send) }}
+                </div>
+            </div>
             {{ form_end(subscribeForm) }}
 
             {{ form_start(unsubscribeForm, {'attr': {'novalidate': 'novalidate'}}) }}
-            <table>
-                <tr>
-                    <td class="destacat llista_accio">
-                        {{ form_label(unsubscribeForm.email) }}
-                    </td>
-                    <td class="destacat llista_input">
-                        {{ form_widget(unsubscribeForm.email) }}
-                    </td>
-                    <td class="destacat llista_submit">
-                        -{{ form_widget(unsubscribeForm.send) }}
-                    </td>
-                </tr>
-            </table>
+            <div class="destacat mailing_list_form">
+                <div class="llista_accio">
+                    {{ form_label(unsubscribeForm.email) }}
+                </div>
+                <div class="llista_input">
+                    {{ form_widget(unsubscribeForm.email) }}
+                </div>
+                <div class="llista_submit">
+                    <span>-</span>{{ form_widget(unsubscribeForm.send) }}
+                </div>
+            </div>
             {{ form_end(unsubscribeForm) }}
 
             {{ form_errors(subscribeForm.email) }}

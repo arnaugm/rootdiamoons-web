@@ -1,0 +1,76 @@
+.bloc_album {
+    padding: 30px 0 9px 0;
+}
+
+.bloc_album img {
+    display: block;
+}
+
+.text_album {
+    padding: 0 0 5px 2px;
+}
+
+@media (max-width: 758px) {
+    .text_album {
+        padding-left: 11px;
+    }
+}
+
+.titol_album {
+    font-size: 20px;
+}
+
+.detall_album {
+    color: #e4e2a2;
+    font-size: 13px;
+}
+
+.llista_album {
+    display: none;
+}
+
+.fotograf {
+    font-size: 11px;
+    text-align: right;
+    font-style: italic;
+}
+
+@media (max-width: 758px) {
+    .fotograf {
+        padding-right: 11px;
+    }
+}
+
+.veure_album {
+    color: #e4e2a2;
+    font-style: italic;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 758px) {
+    .veure_album {
+        text-align: left;
+        padding-left: 11px;
+    }
+}
+
+#albums {
+    background-image: url(../images/retall_albums.png);
+    width: 325px;
+    height: 72px;
+    margin: auto;
+    margin-top: 19px;
+}
+
+#albums div {
+    padding-top: 17px;
+    text-align: center;
+}
+
+#albums a {
+    color: #22240b;
+    font-size: 35px;
+    font-style: normal;
+    text-decoration: none;
+}

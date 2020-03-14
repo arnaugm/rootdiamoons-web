@@ -1,0 +1,76 @@
+#llista_correu_text {
+    max-width: 476px;
+    margin: auto;
+    padding: 35px 11px 0 11px;
+}
+
+#llista_correu_text table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 5px -1px;
+}
+
+.mailing_list_form {
+    margin-bottom: 6px;
+}
+
+.llista_accio {
+    font-size: 20px;
+    width: 15%;
+}
+
+.llista_input {
+    padding: 4px 0;
+    width: 70%;
+}
+
+@media (max-width: 758px) {
+    .llista_input {
+        width: 60%;
+    }
+}
+
+.llista_submit {
+    display: flex;
+    width: 10%;
+}
+
+@media (max-width: 758px) {
+    .llista_submit {
+        width: 25%;
+    }
+}
+
+.llista_input input {
+    width: 95%;
+    height: 20px;
+    background: rgb(5, 7, 1);
+    background: rgba(5, 7, 1, 0.3);
+    border: 0;
+    color: #e4e2a2;
+    font-family: "Georgia";
+    font-size: 13px;
+    font-style: italic;
+    padding-left: 8px;
+}
+
+.llista_submit button {
+    border: 0;
+    background-color: transparent;
+    color: #e4e2a2;
+    cursor: pointer;
+    font-family: "Georgia";
+    font-size: 11px;
+    font-style: italic;
+}
+
+.llista_submit button:hover{
+    text-decoration: underline;
+}
+
+#correu_nota {
+    font-size: 11px;
+    color: #e4e2a2;
+    font-style: italic;
+    padding-top: 20px;
+}

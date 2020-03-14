@@ -4,7 +4,8 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" type="text/css" media="screen" charset="utf-8" />
+    <link href="{{ asset('css/band.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('vendor/prettyphoto/css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block content %}
@@ -12,53 +13,43 @@
 
         <h2>{{ 'grup' | trans }}</h2>
 
-        <img src="{{ asset('images/foto_ombra_dalt.png') }}" alt="" />
-        <img src="{{ asset('images/foto_grup_2014.jpg') }}" alt="foto grup" />
-        <img src="{{ asset('images/foto_ombra_baix.png') }}" alt="" />
-        <div id="components_grup">
-            <table>
-                <tr>
-                    <td id="primera_col">
-                        <a href="{{ asset('images/grup/anna.jpg') }}" rel="prettyPhoto[grup]" title="Anna Olivella - {{ 'cantant' | trans }}" class="nom_component">Anna Olivella</a><br />
-                        <span class="instrument">{{ 'cantant' | trans }}</span>
-                    </td>
-                    <td id="segona_col">
-                        <a href="{{ asset('images/grup/jep.jpg') }}" rel="prettyPhoto[grup]" title="Jep Jorba - {{ 'trombo' | trans }}" class="nom_component">Jep Jorba</a><br />
-                        <span class="instrument">{{ 'trombo' | trans }}</span>
-                    </td>
-                    <td id="tercera_col">
-                        <a href="{{ asset('images/grup/pau.jpg') }}" rel="prettyPhoto[grup]" title="Pau Garcia - {{ 'teclats' | trans }}" class="nom_component">Pau Garcia</a><br />
-                        <span class="instrument">{{ 'teclats' | trans }}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="{{ asset('images/grup/xavi.jpg') }}" rel="prettyPhoto[grup]" title="Xavi Casanovas - {{ 'trompeta' | trans }}" class="nom_component">Xavi Casanovas</a><br />
-                        <span class="instrument">{{ 'trompeta' | trans }}</span>
-                    </td>
-                    <td>
-                        <a href="{{ asset('images/grup/toldra.jpg') }}" rel="prettyPhoto[grup]" title="Adrià Toldrà - {{ 'guitarra' | trans }}" class="nom_component">Adrià Toldrà</a><br />
-                        <span class="instrument">{{ 'guitarra' | trans }}</span>
-                    </td>
-                    <td>
-                        <a href="{{ asset('images/grup/joan.jpg') }}" rel="prettyPhoto[grup]" title="Joan Llansana - {{ 'baix' | trans }}" class="nom_component">Joan Llansana</a><br />
-                        <span class="instrument">{{ 'baix' | trans }}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="{{ asset('images/grup/arnau.jpg') }}" rel="prettyPhoto[grup]" title="Arnau González - {{ 'saxo_tenor' | trans }}" class="nom_component">Arnau González</a><br />
-                        <span class="instrument">{{ 'saxo_tenor' | trans }}</span>
-                    </td>
-                    <td>
-                        <a href="{{ asset('images/grup/marti.jpg') }}" rel="prettyPhoto[grup]" title="Martí Lázaro - {{ 'bateria' | trans }}" class="nom_component">Martí Lázaro</a><br />
-                        <span class="instrument">{{ 'bateria' | trans }}</span>
-                    </td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-            </table>
+        <img src="{{ asset('images/foto_ombra_dalt.png') }}" class="shadow_image" alt="" />
+        <img src="{{ asset('images/foto_grup_2014.jpg') }}" class="max_width_image" alt="foto grup" />
+        <img src="{{ asset('images/foto_ombra_baix.png') }}" class="shadow_image" alt="" />
+        <div class="components_grup">
+            <div class="component">
+                <a href="{{ asset('images/grup/anna.jpg') }}" rel="prettyPhoto[grup]" title="Anna Olivella - {{ 'cantant' | trans }}" class="nom_component">Anna Olivella</a>
+                <span class="instrument">{{ 'cantant' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/jep.jpg') }}" rel="prettyPhoto[grup]" title="Jep Jorba - {{ 'trombo' | trans }}" class="nom_component">Jep Jorba</a>
+                <span class="instrument">{{ 'trombo' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/pau.jpg') }}" rel="prettyPhoto[grup]" title="Pau Garcia - {{ 'teclats' | trans }}" class="nom_component">Pau Garcia</a>
+                <span class="instrument">{{ 'teclats' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/xavi.jpg') }}" rel="prettyPhoto[grup]" title="Xavi Casanovas - {{ 'trompeta' | trans }}" class="nom_component">Xavi Casanovas</a>
+                <span class="instrument">{{ 'trompeta' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/toldra.jpg') }}" rel="prettyPhoto[grup]" title="Adrià Toldrà - {{ 'guitarra' | trans }}" class="nom_component">Adrià Toldrà</a>
+                <span class="instrument">{{ 'guitarra' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/joan.jpg') }}" rel="prettyPhoto[grup]" title="Joan Llansana - {{ 'baix' | trans }}" class="nom_component">Joan Llansana</a>
+                <span class="instrument">{{ 'baix' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/arnau.jpg') }}" rel="prettyPhoto[grup]" title="Arnau González - {{ 'saxo_tenor' | trans }}" class="nom_component">Arnau González</a>
+                <span class="instrument">{{ 'saxo_tenor' | trans }}</span>
+            </div>
+            <div class="component">
+                <a href="{{ asset('images/grup/marti.jpg') }}" rel="prettyPhoto[grup]" title="Martí Lázaro - {{ 'bateria' | trans }}" class="nom_component">Martí Lázaro</a>
+                <span class="instrument">{{ 'bateria' | trans }}</span>
+            </div>
+            <div class="component">&nbsp;</div>
         </div>
     </div>
 {% endblock %}

@@ -2,6 +2,11 @@
 
 {% block title %}Root Diamoons - {{ 'videos' | trans }}{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/videos.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block content %}
     <div id="videos" class="primer_bloc ultim_bloc">
 
@@ -11,8 +16,8 @@
             <div class="text_video">
                 <span class="titol_video">Renunciar</span> <span class="detall_video">- {{ 'panchita' | trans }}</span>
             </div>
-            <div id="video_renunciar">
-                <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/Dno5YU_w_PI?showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <div id="video_renunciar" class="video">
+                <iframe src="https://www.youtube-nocookie.com/embed/Dno5YU_w_PI?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -20,7 +25,7 @@
             <div class="text_video">
                 <span class="titol_video">Canvi d'època</span> <span class="detall_video">- {{ 'panchita' | trans }}</span>
             </div>
-            <div id="video_canviepoca">
+            <div id="video_canviepoca" class="video">
                 <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/e_g2dqZtOgQ?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
@@ -29,7 +34,7 @@
             <div class="text_video">
                 <span class="titol_video">Rototom Sunsplash 2011</span> <span class="detall_video">- {{ 'amb_rico' | trans }}</span>
             </div>
-            <div id="video_rototom">
+            <div id="video_rototom" class="video">
                 <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/1fdw7HXz80Y?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
@@ -38,7 +43,7 @@
             <div class="text_video">
                 <span class="titol_video">Tot al seu temps</span> <span class="detall_video">- {{ 'making_of' | trans }}</span>
             </div>
-            <div id="video_tast">
+            <div id="video_tast" class="video">
                 <iframe width="758" height="426" src="https://www.youtube-nocookie.com/embed/r0bWxYSfT2M?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
@@ -47,7 +52,7 @@
             <div class="text_video">
                 <span class="titol_video">Other eyes</span> <span class="detall_video">- {{ 'presentacio_other_eyes' | trans }}</span>
             </div>
-            <div id="video_othereyes">
+            <div id="video_othereyes" class="video">
                 <iframe width="758" height="569" src="https://www.youtube-nocookie.com/embed/L8uD1qRGspE?showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>

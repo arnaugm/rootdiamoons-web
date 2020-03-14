@@ -1,50 +1,54 @@
 			<div id="cap">
-				<a id="zona_logo" href="{{ path('homepage') }}"><span>Root Diamoons</span></a>
-				<div id="idiomes">
+                <div class="cap_main">
+                    <a class="logo_mobile" href="{{ path('homepage') }}"><img src="{{ asset('images/logo_mobile.png') }}" alt="Root Diamoons"></a>
+                    <a class="logo_name_mobile" href="{{ path('homepage') }}"><img src="{{ asset('images/logo_name_mobile.png') }}" alt="Root Diamoons"></a>
+                    <a id="zona_logo" href="{{ path('homepage') }}"><span>Root Diamoons</span></a>
+                    <div id="idiomes"><!--
+￼                       {% if app.request.locale == 'ca' %}
+￼                           --><span class="sel">Català</span><!--
+￼                       {% else %}
+￼                           --><a href="{{ path(app.request.get('_route'), { _locale: 'ca'}) }}">Català</a><!--
+￼                       {% endif %}
 
-                    {% if app.request.locale == 'ca' %}
-					<span class="sel">Català</span><br />
-					{% else %}
-					<a href="{{ path(app.request.get('_route'), { _locale: 'ca'}) }}">Català</a><br />
-					{% endif %}
+                        {% if app.request.locale == 'es' %}
+                            --><span class="sel">Castellano</span><!--
+                        {% else %}
+                            --><a href="{{ path(app.request.get('_route'), { _locale: 'es'}) }}">Castellano</a><!--
+                        {% endif %}
 
-                    {% if app.request.locale == 'es' %}
-					<span class="sel">Castellano</span><br />
-                    {% else %}
-                    <a href="{{ path(app.request.get('_route'), { _locale: 'es'}) }}">Castellano</a><br />
-                    {% endif %}
-
-                    {% if app.request.locale == 'en' %}
-					<span class="sel">English</span>
-                    {% else %}
-                    <a href="{{ path(app.request.get('_route'), { _locale: 'en'}) }}">English</a><br />
-                    {% endif %}
-
+                        {% if app.request.locale == 'en' %}
+                            --><span class="sel">English</span><!--
+                        {% else %}
+                            --><a href="{{ path(app.request.get('_route'), { _locale: 'en'}) }}">English</a><!--
+                        {% endif %}
+                    --></div>
                 </div>
-				<br class="clearboth" />
+
 				<div id="menu">
 					<ul>
-                        <li class="inici">
+                        <li>
                             <a href="{{ path('homepage') }}"{% if app.request.attributes.get('_route')  == 'homepage' %} class="sel"{% endif %}>{{ 'inici' | trans }}</a>
                         </li>
-                        <li class="musica">
+                        <li>
                             <a href="{{ path('music') }}"{% if app.request.attributes.get('_route')  == 'music' %} class="sel"{% endif %}>{{ 'musica' | trans }}</a>
                         </li>
-                        <li class="videos">
+                        <li>
                             <a href="{{ path('videos') }}"{% if app.request.attributes.get('_route')  == 'videos' %} class="sel"{% endif %}>{{ 'videos' | trans }}</a>
                         </li>
-                        <li class="concerts">
+                        <li>
                             <a href="{{ path('concerts') }}"{% if app.request.attributes.get('_route')  == 'concerts' %} class="sel"{% endif %}>{{ 'concerts' | trans }}</a>
                         </li>
-                        <li class="fotos">
+                        <li>
                             <a href="{{ path('photos') }}"{% if app.request.attributes.get('_route')  == 'photos' %} class="sel"{% endif %}>{{ 'fotos' | trans }}</a>
                         </li>
-                        <li class="grup">
+                        <li>
                             <a href="{{ path('band') }}"{% if app.request.attributes.get('_route')  == 'band' %} class="sel"{% endif %}>{{ 'grup' | trans }}</a>
                         </li>
-                        <li class="contacte">
+                        <li>
                             <a href="{{ path('contact') }}"{% if app.request.attributes.get('_route')  == 'contact' %} class="sel"{% endif %}>{{ 'contacte' | trans }}</a>
                         </li>
 					</ul>
 				</div>
+
+                <button id="drawer_menu_open" type="button" class="hamburger_menu">&#9776;</button>
 			</div>

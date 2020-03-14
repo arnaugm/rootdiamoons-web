@@ -1,0 +1,55 @@
+#login {
+    width: 476px;
+    margin: auto;
+    padding-top: 35px;
+}
+
+#login table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 5px -1px;
+}
+
+td.login_label {
+    font-size: 20px;
+    width: 80px;
+}
+
+td.login_input {
+    padding: 4px 0;
+    width: 294px;
+}
+
+td.login_input input {
+    width: 294px;
+    height: 20px;
+    background: rgb(5, 7, 1);
+    background: rgba(5, 7, 1, 0.3);
+    border: 0;
+    color: #e4e2a2;
+    font-family: "Georgia";
+    font-size: 13px;
+    font-style: italic;
+    padding-left: 8px;
+}
+
+td.login_submit button {
+    border: 0;
+    background-color: transparent;
+    color: #e4e2a2;
+    cursor: pointer;
+    font-family: "Georgia";
+    font-size: 11px;
+    font-style: italic;
+}
+
+td.llista_submit button:hover {
+    text-decoration: underline;
+}
+
+#login_error {
+    font-size: 11px;
+    color: #e40110;
+    font-style: italic;
+    padding: 10px 0 0 10px;
+}
