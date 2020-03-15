@@ -38,7 +38,7 @@
             <button id="drawer_menu_close" type="button">X</button>
         </div>
         <div id="idiomes_mobile">
-￼           {% if app.request.locale == 'ca' %}
+            {% if app.request.locale == 'ca' %}
                 <span class="sel">Cat</span>
             {% else %}
                 <a href="{{ path(app.request.get('_route'), { _locale: 'ca'}) }}">Cat</a>
