@@ -5,7 +5,7 @@ namespace App\Manager;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Yaml\Yaml;
 
-class RecopManager
+class StreamingPlatformManager
 {
     /**
      * Constructor
@@ -14,13 +14,13 @@ class RecopManager
     {
     }
 
-    public function getRecops()
+    public function getPlatforms()
     {
         $configDirectories = array(__DIR__);
 
         $locator = new FileLocator($configDirectories);
-        $yamlRecopsFile = $locator->locate('recops.yml', null, true);
+        $yamlPlatformsFile = $locator->locate('streaming_platforms.yml', null, true);
 
-        return Yaml::parse(file_get_contents($yamlRecopsFile));
+        return Yaml::parse(file_get_contents($yamlPlatformsFile));
     }
 } 

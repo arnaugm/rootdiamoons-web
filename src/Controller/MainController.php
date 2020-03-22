@@ -6,6 +6,7 @@ use App\Form\Type\SubscribeType;
 use App\Form\Type\UnsubscribeType;
 use App\Manager\ConcertManager;
 use App\Manager\RecopManager;
+use App\Manager\StreamingPlatformManager;
 use App\Manager\SubscribeManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -22,11 +23,12 @@ class MainController extends AbstractController
         return $this->render('home.html.twig', array('nextConcerts' => $nextConcerts));
     }
 
-    public function music(RecopManager $recopManager)
+    public function music(RecopManager $recopManager, StreamingPlatformManager $streamingPlatformManager)
     {
         $recops = $recopManager->getRecops();
+        $platforms = $streamingPlatformManager->getPlatforms();
 
-        return $this->render('music.html.twig', array('recops' => $recops));
+        return $this->render('music.html.twig', array('recops' => $recops, 'platforms' => $platforms));
     }
 
     public function videos()

@@ -1,0 +1,88 @@
+439:
+    spotify:
+        name: 'spotify'
+        url: 'https://open.spotify.com/album/3Fct3M45JPXaENRDBYi0KU'
+    itunes:
+        name: 'itunes'
+        url: 'https://music.apple.com/es/album/439-ep/1490290450'
+    google_play:
+        name: 'google play'
+        url: 'https://play.google.com/store/music/album/Root_Diamoons_439?id=Bquwgltqzd4tqbn6e4h5joazq3y'
+    amazon:
+        name: 'amazon music'
+        url: 'https://www.amazon.com/-/es/dp/B082DH7CS2'
+    youtube:
+        name: 'youtube music'
+        url: 'https://music.youtube.com/browse/MPREb_r8Yh2oz0uiO'
+    deezer:
+        name: 'deezer'
+        url: 'https://www.deezer.com/en/album/121650712'
+    soundcloud:
+        name: 'soundcloud'
+        url: 'https://soundcloud.com/rootdiamoons/sets/439-193093051'
+
+facil:
+    bandcamp:
+        name: 'bandcamp'
+        url: 'https://lapanchitarecords.bandcamp.com/album/root-diamoons-f-cil-la-panchita-records-2016'
+    spotify:
+        name: 'spotify'
+        url: 'https://open.spotify.com/album/2lQzTsDlZJxegRBe9vHzWt'
+    itunes:
+        name: 'itunes'
+        url: 'https://music.apple.com/es/album/f%C3%A0cil-ep/1230137743'
+    google_play:
+        name: 'google play'
+        url: 'https://play.google.com/store/music/album/Root_Diamoons_F%C3%A0cil?id=Bp6k5nulslzsumjgnqfc3wzmbue'
+    amazon:
+        name: 'amazon music'
+        url: 'https://www.amazon.com/-/es/dp/B071YMGNMQ'
+    youtube:
+        name: 'youtube music'
+        url: 'https://music.youtube.com/browse/MPREb_dp3YyaG0xp3'
+    deezer:
+        name: 'deezer'
+        url: 'https://www.deezer.com/en/album/40645861'
+    soundcloud:
+        name: 'soundcloud'
+        url: 'https://soundcloud.com/rootdiamoons/sets/facil-6'
+
+tast:
+    spotify:
+        name: 'spotify'
+        url: 'http://open.spotify.com/album/41CLwteCpm6w18ylgl4NZj'
+    itunes:
+        name: 'itunes'
+        url: 'https://music.apple.com/es/album/tot-al-seu-temps/522454560'
+    google_play:
+        name: 'google play'
+        url: 'https://play.google.com/store/music/album/Root_Diamoons_Tot_Al_Seu_Temps?id=Bh3mxjfo5dymvph47riltt4dsku'
+    amazon:
+        name: 'amazon music'
+        url: 'https://www.amazon.com/-/es/dp/B007XQYLI6'
+    youtube:
+        name: 'youtube music'
+        url: 'https://music.youtube.com/browse/MPREb_j5ETZWvesv3'
+    deezer:
+        name: 'deezer'
+        url: 'https://www.deezer.com/en/album/2770521'
+
+woe:
+    spotify:
+        name: 'spotify'
+        url: 'http://open.spotify.com/album/4w3akPwatVYXcZbbKE7MIN'
+    itunes:
+        name: 'itunes'
+        url: 'https://music.apple.com/es/album/with-other-eyes/412950618'
+    google_play:
+        name: 'google play'
+        url: 'https://play.google.com/store/music/album/Root_Diamoons_With_Other_Eyes?id=Bzkfmfirvsj32zecgnorcnyygza'
+    amazon:
+        name: 'amazon music'
+        url: 'https://www.amazon.com/-/es/dp/B004HCTQ6Q'
+    youtube:
+        name: 'youtube music'
+        url: 'https://music.youtube.com/browse/MPREb_DsS9AfOvKFc'
+    deezer:
+        name: 'deezer'
+        url: 'https://www.deezer.com/en/album/743691'

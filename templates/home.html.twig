@@ -6,14 +6,16 @@
 {% endblock %}
 
 {% block content %}
-    <div id="video_home">
-        <iframe src="https://www.youtube.com/embed/Dno5YU_w_PI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="img_main">
+        <a href="https://music.youtube.com/browse/MPREb_r8Yh2oz0uiO" target="_blank">
+            <img src="{{ asset('images/caratula_439_lg.jpg') }}" alt="439" />
+        </a>
     </div>
-    <div id="separador_video">&nbsp;</div>
+    <div id="separador_main">&nbsp;</div>
     <div id="noticia">
         {{ 'destacat_1' | trans }}<br/>
 
-        <div class="titol1">Fàcil</div>
+        <div class="titol1">439</div>
         {{ 'destacat_2' | trans }}
     </div>
     {%  if nextConcerts is not empty %}
